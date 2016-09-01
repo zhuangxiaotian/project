@@ -1,0 +1,465 @@
+html, body {
+  font-size: 16px;
+  height: 100%; }
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Helvetica Neue",Roboto,"Segoe UI",sans-serif;
+  color: #666;
+  margin: 0 auto;
+  position: relative;
+  -webkit-touch-callout: none;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+a, button {
+  cursor: pointer;
+  outline: 0;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
+
+img {
+  border: 0;
+  margin: 0 auto; }
+
+input {
+  text-align: center; }
+  input:focus {
+    outline: none; }
+  input::-webkit-input-placeholder {
+    text-align: center; }
+  input:-ms-input-placeholder {
+    text-align: center; }
+  input:-moz-placeholder {
+    text-align: center; }
+
+body, p, a, ul, li, em, dl, dt, dd, input, button, span, i, strong {
+  margin: 0;
+  padding: 0; }
+
+.bg-yellow {
+  background-color: #e6dfc2; }
+
+.bg-red {
+  background-color: #931901; }
+
+.box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  left: 0px;
+  top: 0px;
+  z-index: 0; }
+  .box .section {
+    width: 100%;
+    height: 100%;
+    position: relative; }
+    .box .section img {
+      width: 100%;
+      height: 100%; }
+    .box .section .tell1,
+    .box .section .get,
+    .box .section .state,
+    .box .section .none {
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      position: absolute;
+      top: 52%;
+      z-index: 3;
+      display: table; }
+      .box .section .tell1 a,
+      .box .section .get a,
+      .box .section .state a,
+      .box .section .none a {
+        display: block;
+        width: 62%;
+        margin: 0 auto;
+        height: 40px;
+        line-height: 40px;
+        text-decoration: none; }
+    .box .section .tell1 {
+      top: 82%; }
+    .box .section .get, .box .section .state {
+      top: 28%;
+      font-size: 16px;
+      color: #7c4a01; }
+      .box .section .get span, .box .section .state span {
+        font-size: 18px;
+        color: #db483c; }
+    .box .section .state {
+      top: 22%; }
+    .box .section .none {
+      top: 34%;
+      font-size: 14px;
+      color: #bc8c45; }
+
+.box-index {
+  height: auto;
+  overflow: auto;
+  min-height: 560px;
+  background-image: url(../images/index.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  padding-bottom: 10px; }
+  .box-index .section-index {
+    width: 100%;
+    height: 100%; }
+    .box-index .section-index .place-border {
+      width: 100%;
+      height: 1px; }
+    .box-index .section-index input {
+      display: inline-block;
+      width: 80%;
+      margin: 0 auto;
+      outline: 0;
+      border: 0;
+      background: none;
+      font-size: 16px;
+      vertical-align: middle; }
+    .box-index .section-index .adv {
+      width: 80%;
+      margin-left: 10%;
+      position: relative; }
+      .box-index .section-index .adv .adv1, .box-index .section-index .adv .adv2 {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 14px;
+        color: #db483c;
+        font-weight: bold;
+        position: absolute;
+        top: 36%;
+        z-index: 3; }
+        .box-index .section-index .adv .adv1 span, .box-index .section-index .adv .adv2 span {
+          font-size: 30px; }
+      .box-index .section-index .adv .adv2 {
+        top: 45.5%;
+        font-size: 16px;
+        color: #7c4a01;
+        font-weight: normal; }
+        .box-index .section-index .adv .adv2 span {
+          font-size: 18px; }
+    .box-index .section-index .input1, .box-index .section-index .input2, .box-index .section-index .charge, .box-index .section-index .tell_index {
+      width: 60%;
+      margin-left: 20%;
+      margin-top: 2%;
+      text-align: center;
+      background: url(../images/input_l.png) no-repeat center;
+      background-size: cover;
+      -webkit-background-size: cover;
+      -webkit-border-radius: 24px;
+      -moz-border-radius: 24px;
+      -ms-border-radius: 24px;
+      border-radius: 24px; }
+    .box-index .section-index .input2 {
+      margin-top: 6%; }
+    .box-index .section-index .charge {
+      margin-top: 6%;
+      background: url(../images/btn_red.png) no-repeat center;
+      background-size: cover;
+      -webkit-background-size: cover; }
+      .box-index .section-index .charge > a {
+        width: 100%;
+        color: #ffffff;
+        text-decoration: none; }
+    .box-index .section-index .tell_index {
+      margin-top: 8%;
+      background: url(../images/btn_yellow.png) no-repeat center; }
+      .box-index .section-index .tell_index > a {
+        width: 100%;
+        color: #7c4a01;
+        text-decoration: none; }
+
+.share {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10; }
+  .share > img {
+    display: block;
+    width: 100%;
+    height: 100%; }
+
+.dialog .cover {
+  background: #000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  filter: alpha(opacity=70);
+  -moz-opacity: 0.7;
+  opacity: 0.7;
+  z-index: 8; }
+.dialog .loading-content {
+  width: 31px;
+  height: 31px;
+  margin: 0 auto;
+  background: url("../images/loading.gif");
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -16px;
+  margin-top: -16px;
+  z-index: 9; }
+.dialog .dialog-content {
+  width: 90%;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 5px;
+  position: fixed;
+  left: 5%;
+  top: 30%;
+  z-index: 9; }
+  .dialog .dialog-content .dialog-style {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+    position: relative; }
+    .dialog .dialog-content .dialog-style .dialog-close {
+      display: block;
+      width: 14px;
+      height: 14px;
+      padding: 6px;
+      position: absolute;
+      right: 5px;
+      top: -15px;
+      z-index: 9; }
+      .dialog .dialog-content .dialog-style .dialog-close > i {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        background: url(../images/icon_close.png) no-repeat center;
+        background-size: contain; }
+  .dialog .dialog-content > p {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 15px;
+    padding: 10px 0; }
+  .dialog .dialog-content .dialog-detail-m {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 16px; }
+  .dialog .dialog-content .dialog-btn {
+    width: 100%;
+    text-align: center; }
+    .dialog .dialog-content .dialog-btn > a {
+      display: inline-block;
+      width: 35%;
+      line-height: 30px;
+      margin: 10px auto;
+      text-decoration: none;
+      font-size: 16px;
+      background-color: #fa4f47;
+      color: #ffffff;
+      border: 0;
+      border-radius: 6px;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px; }
+    .dialog .dialog-content .dialog-btn .btn-yellow {
+      background-color: #ffc038; }
+
+/***Media Query***/
+/*iphone4*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  .box .section .input1, .box .section .box-index .section-index .input2, .box-index .section-index .box .section .input2, .box .section .box-index .section-index .charge, .box-index .section-index .box .section .charge, .box .section .box-index .section-index .tell_index, .box-index .section-index .box .section .tell_index,
+  .box .section .input2,
+  .box .section .charge,
+  .box .section .tell_index,
+  .box .section .adv1,
+  .box .section .box-index .section-index .adv .adv2,
+  .box-index .section-index .adv .box .section .adv2,
+  .box .section .adv2,
+  .box .section .none,
+  .box .section .get,
+  .box .section .state {
+    height: 30px;
+    line-height: 30px; }
+    .box .section .input1 input, .box .section .box-index .section-index .input2 input, .box-index .section-index .box .section .input2 input, .box .section .box-index .section-index .charge input, .box-index .section-index .box .section .charge input, .box .section .box-index .section-index .tell_index input, .box-index .section-index .box .section .tell_index input,
+    .box .section .input2 input,
+    .box .section .charge input,
+    .box .section .tell_index input,
+    .box .section .adv1 input,
+    .box .section .box-index .section-index .adv .adv2 input,
+    .box-index .section-index .adv .box .section .adv2 input,
+    .box .section .adv2 input,
+    .box .section .none input,
+    .box .section .get input,
+    .box .section .state input {
+      font-size: 14px; }
+    .box .section .input1 a, .box .section .box-index .section-index .input2 a, .box-index .section-index .box .section .input2 a, .box .section .box-index .section-index .charge a, .box-index .section-index .box .section .charge a, .box .section .box-index .section-index .tell_index a, .box-index .section-index .box .section .tell_index a,
+    .box .section .input2 a,
+    .box .section .charge a,
+    .box .section .tell_index a,
+    .box .section .adv1 a,
+    .box .section .box-index .section-index .adv .adv2 a,
+    .box-index .section-index .adv .box .section .adv2 a,
+    .box .section .adv2 a,
+    .box .section .none a,
+    .box .section .get a,
+    .box .section .state a {
+      height: 30px;
+      line-height: 30px; }
+  .box .section .none {
+    font-size: 12px; }
+  .box .section .tell1 {
+    height: 35px;
+    line-height: 35px; } }
+/*iphone5*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  .box .section .input1, .box .section .box-index .section-index .input2, .box-index .section-index .box .section .input2, .box .section .box-index .section-index .charge, .box-index .section-index .box .section .charge, .box .section .box-index .section-index .tell_index, .box-index .section-index .box .section .tell_index,
+  .box .section .input2,
+  .box .section .charge,
+  .box .section .tell_index,
+  .box .section .adv1,
+  .box .section .box-index .section-index .adv .adv2,
+  .box-index .section-index .adv .box .section .adv2,
+  .box .section .adv2,
+  .box .section .none,
+  .box .section .get,
+  .box .section .state {
+    height: 31px;
+    line-height: 31px; }
+    .box .section .input1 input, .box .section .box-index .section-index .input2 input, .box-index .section-index .box .section .input2 input, .box .section .box-index .section-index .charge input, .box-index .section-index .box .section .charge input, .box .section .box-index .section-index .tell_index input, .box-index .section-index .box .section .tell_index input,
+    .box .section .input2 input,
+    .box .section .charge input,
+    .box .section .tell_index input,
+    .box .section .adv1 input,
+    .box .section .box-index .section-index .adv .adv2 input,
+    .box-index .section-index .adv .box .section .adv2 input,
+    .box .section .adv2 input,
+    .box .section .none input,
+    .box .section .get input,
+    .box .section .state input {
+      font-size: 14px; }
+    .box .section .input1 a, .box .section .box-index .section-index .input2 a, .box-index .section-index .box .section .input2 a, .box .section .box-index .section-index .charge a, .box-index .section-index .box .section .charge a, .box .section .box-index .section-index .tell_index a, .box-index .section-index .box .section .tell_index a,
+    .box .section .input2 a,
+    .box .section .charge a,
+    .box .section .tell_index a,
+    .box .section .adv1 a,
+    .box .section .box-index .section-index .adv .adv2 a,
+    .box-index .section-index .adv .box .section .adv2 a,
+    .box .section .adv2 a,
+    .box .section .none a,
+    .box .section .get a,
+    .box .section .state a {
+      height: 31px;
+      line-height: 31px; }
+  .box .section .none {
+    font-size: 12px; }
+  .box .section .tell1 {
+    height: 40px;
+    line-height: 40px; } }
+/*iphone6*/
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+  .box .section .input1, .box .section .box-index .section-index .input2, .box-index .section-index .box .section .input2, .box .section .box-index .section-index .charge, .box-index .section-index .box .section .charge, .box .section .box-index .section-index .tell_index, .box-index .section-index .box .section .tell_index,
+  .box .section .input2,
+  .box .section .charge,
+  .box .section .tell_index,
+  .box .section .adv1,
+  .box .section .box-index .section-index .adv .adv2,
+  .box-index .section-index .adv .box .section .adv2,
+  .box .section .adv2,
+  .box .section .none,
+  .box .section .get,
+  .box .section .state {
+    height: 40px;
+    line-height: 40px; }
+    .box .section .input1 input, .box .section .box-index .section-index .input2 input, .box-index .section-index .box .section .input2 input, .box .section .box-index .section-index .charge input, .box-index .section-index .box .section .charge input, .box .section .box-index .section-index .tell_index input, .box-index .section-index .box .section .tell_index input,
+    .box .section .input2 input,
+    .box .section .charge input,
+    .box .section .tell_index input,
+    .box .section .adv1 input,
+    .box .section .box-index .section-index .adv .adv2 input,
+    .box-index .section-index .adv .box .section .adv2 input,
+    .box .section .adv2 input,
+    .box .section .none input,
+    .box .section .get input,
+    .box .section .state input {
+      font-size: 16px; }
+    .box .section .input1 a, .box .section .box-index .section-index .input2 a, .box-index .section-index .box .section .input2 a, .box .section .box-index .section-index .charge a, .box-index .section-index .box .section .charge a, .box .section .box-index .section-index .tell_index a, .box-index .section-index .box .section .tell_index a,
+    .box .section .input2 a,
+    .box .section .charge a,
+    .box .section .tell_index a,
+    .box .section .adv1 a,
+    .box .section .box-index .section-index .adv .adv2 a,
+    .box-index .section-index .adv .box .section .adv2 a,
+    .box .section .adv2 a,
+    .box .section .none a,
+    .box .section .get a,
+    .box .section .state a {
+      height: 40px;
+      line-height: 40px; }
+  .box .section .none {
+    font-size: 14px; }
+  .box .section .tell1 {
+    height: 44px;
+    line-height: 44px; } }
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: portrait) {
+  .box .section .input1, .box .section .box-index .section-index .input2, .box-index .section-index .box .section .input2, .box .section .box-index .section-index .charge, .box-index .section-index .box .section .charge, .box .section .box-index .section-index .tell_index, .box-index .section-index .box .section .tell_index,
+  .box .section .input2,
+  .box .section .charge,
+  .box .section .none,
+  .box .section .tell_index,
+  .box .section .adv1,
+  .box .section .box-index .section-index .adv .adv2,
+  .box-index .section-index .adv .box .section .adv2,
+  .box .section .adv2,
+  .box .section .get,
+  .box .section .state {
+    height: 45px;
+    line-height: 45px; }
+    .box .section .input1 input, .box .section .box-index .section-index .input2 input, .box-index .section-index .box .section .input2 input, .box .section .box-index .section-index .charge input, .box-index .section-index .box .section .charge input, .box .section .box-index .section-index .tell_index input, .box-index .section-index .box .section .tell_index input,
+    .box .section .input2 input,
+    .box .section .charge input,
+    .box .section .none input,
+    .box .section .tell_index input,
+    .box .section .adv1 input,
+    .box .section .box-index .section-index .adv .adv2 input,
+    .box-index .section-index .adv .box .section .adv2 input,
+    .box .section .adv2 input,
+    .box .section .get input,
+    .box .section .state input {
+      font-size: 18px; }
+    .box .section .input1 a, .box .section .box-index .section-index .input2 a, .box-index .section-index .box .section .input2 a, .box .section .box-index .section-index .charge a, .box-index .section-index .box .section .charge a, .box .section .box-index .section-index .tell_index a, .box-index .section-index .box .section .tell_index a,
+    .box .section .input2 a,
+    .box .section .charge a,
+    .box .section .none a,
+    .box .section .tell_index a,
+    .box .section .adv1 a,
+    .box .section .box-index .section-index .adv .adv2 a,
+    .box-index .section-index .adv .box .section .adv2 a,
+    .box .section .adv2 a,
+    .box .section .get a,
+    .box .section .state a {
+      height: 45px;
+      line-height: 45px; }
+  .box .section .none {
+    font-size: 14px; }
+  .box .section .tell1 {
+    height: 50px;
+    line-height: 50px; } }
+
+/*# sourceMappingURL=effect.css.map */

@@ -1,0 +1,55 @@
+@charset "UTF-8";
+//section
+.section{
+  box-sizing: border-box;
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.header-container+.section{
+  padding-top: 45px;
+}
+//清除浮动
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.sub-margin {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+.sub-margin-lr {
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+}
+.sub-padding{
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+.maginTop15{
+  margin-top: 15px;
+}
+//文本居左/中/右
+.text-l{
+  text-align: left!important;
+}
+.text-r{
+  text-align: right!important;
+}
+.center{
+  text-align: center!important;
+}
+
+//底部固定
+.fixed-bottom{
+
+}

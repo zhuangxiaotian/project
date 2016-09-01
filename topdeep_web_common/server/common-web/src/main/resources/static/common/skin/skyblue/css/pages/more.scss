@@ -1,0 +1,152 @@
+@charset "UTF-8";
+//首页更多
+.box-more{
+  background-color: $color-gray;
+}
+.bg-more{
+  @extend .bg-index;
+  background-image: url("../images/bg_more.png");
+}
+.user{
+  padding:40px 10px 10px;
+  text-align: center;
+  font-size: 18px;
+  color: #ffffff;
+}
+.user-number{
+  padding: 10px 10px 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+}
+.circle{
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background-color: #ffffff;
+  vertical-align: middle;
+  margin: 0 8px;
+  @include roundBox($radius:4px);
+}
+.msg-number{//消息数
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: inherit;
+  min-width: 1em;
+  line-height: 1em;
+  padding: 3px;
+  margin-right: .2em;
+  margin-top: -.2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  color: #ffffff;
+  @include roundBox($radius:100%);
+}
+.msg-number-yellow{
+  @extend .msg-number;
+  padding: 4px;
+  background-color: $color-yellow;
+}
+//消息
+.msg{
+  .msg-title{
+    padding-right: 20px;
+  }
+  .msg-title:after{//下箭头
+    content: " ";
+    display: inline-block;
+    height: 10px;
+    width: 18px;
+    background: url("../images/icon_down.png") no-repeat center;
+    background-size: contain;
+    -webkit-background-size: contain;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -3px;
+  }
+  .msg-toggle:after{
+    background-image:url("../images/icon_up.png");
+  }
+}
+//进度条
+.progress{
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  background-color: $color-gray;
+  text-align: center;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top:45px;
+  &+.weui_tab_bd{
+    padding-top: 70px;
+  }
+  .weui_progress{
+    height: 100%;
+    padding: 0 20px;
+  }
+  .weui_progress_bar{
+    height: 5px;
+    margin: 0 10px 0 0;
+    background-color: #a8a8a8;
+    @include roundBox($radius:5px);
+  }
+  .weui_progress_inner_bar{
+    background: -webkit-linear-gradient(left,#f3e015,$color-red); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right,#f3e015,$color-red); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right,#f3e015,$color-red); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right,#f3e015,$color-red); /* 标准的语法*/
+  }
+}
+//取现
+.table-box{
+  padding: 0 10px 10px;
+  background-color: #ffffff;
+}
+.table-cash-box{
+  padding: 0 0 10px;
+  background-color: #ffffff;
+}
+//红包
+.bg-redpacket{
+  @extend .bg-index;
+  background-image: url("../images/bg_redpacket.png");
+}
+.my-redpacket{
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 1rem 0 1.5rem;
+  text-align: center;
+  .money{
+    font-size: 36px;
+    font-weight: 600;
+
+  }
+}
+//活动
+.activity{
+  width: 100%;
+  border:1px solid rgba(217,217,217,0.6);
+  &>img{
+    display: block;
+    border:0;
+    width: 100%;
+  }
+}
+.activity-title{
+  font-size: 16px;
+  padding-bottom: 5px;
+}
+.activity-detail{
+  margin-top: -10px;
+  &:before{
+    border-top: transparent;
+  }
+}

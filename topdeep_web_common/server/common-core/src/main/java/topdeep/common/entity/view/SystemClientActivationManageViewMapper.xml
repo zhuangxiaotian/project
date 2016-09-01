@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="topdeep.common.entity.view.SystemClientActivationManageViewMapper">
+
+	<resultMap type="topdeep.common.entity.view.SystemClientActivationManageView" id="BaseResultMap">
+      <result column="CHANNEL" property="channel" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <result column="CLIENT_TYPE" property="clientType"  javaType="java.lang.String" jdbcType="VARCHAR" />
+      <result column="CLIENT_VERSION" property="clientVersion"  javaType="java.lang.String" jdbcType="VARCHAR" />
+      <result column="DEVICE_ID" property="deviceId" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <result column="CLIENT_MODEL" property="clientModel"  javaType="java.lang.String" jdbcType="VARCHAR" />
+      <result column="CLIENT_OS"  property="clientOs" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <result column="CLIENT_OS_VERSION" property="clientOsVersion"  javaType="java.lang.String" jdbcType="VARCHAR" />
+      <result column="CLIENT_SCREEN_WIDTH" property="clientScreenWidth"  javaType="java.lang.String" jdbcType="VARCHAR" />
+      <result column="CLIENT_SCREEN_HEIGHT"  property="clientScreenHeight" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <result column="CLIENT_SCREEN_DENSITY" property="clientScreenDensity"  javaType="java.lang.String" jdbcType="VARCHAR" />
+      <result column="STATE" property="channel"  javaType="java.lang.String" jdbcType="CHAR" />
+	</resultMap>
+	
+  <select id="selectByExample" parameterType="topdeep.common.entity.view.SystemClientActivationExExample" resultMap="BaseResultMap">
+    <include refid="PagePrefix" />
+    select
+    <foreach collection="groups" item="group" separator=",">
+    	${group}
+    </foreach>
+	    , count(*) as total
+    from T_CLIENT_ACTIVATION
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+	    group by 
+    <foreach collection="groups" item="group" separator=",">
+    	${group}
+    </foreach>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+    <include refid="PageSuffix" />
+  </select>
+  
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  
+  
+  <select id="countByExample" parameterType="topdeep.common.entity.view.SystemClientActivationExExample" resultType="java.lang.Integer">
+	   select count(*) from (
+	    select 
+	    count(*) 
+	     from T_CLIENT_ACTIVATION
+		<if test="_parameter != null">
+	      <include refid="Example_Where_Clause" />
+	    </if>
+	    	group by 
+	   	<foreach collection="groups" item="group" separator=",">
+    		${group}
+   		 </foreach>
+	    )
+	    
+  </select>
+  
+  <sql databaseId="oracle" id="PagePrefix">
+    <if test="page != null">
+      select * from ( select row_.*, rownum rownum_ from ( 
+    </if>
+  </sql>
+  <sql databaseId="mysql" id="PagePrefix">
+    <if test="page != null">
+      select * from ( 
+    </if>
+  </sql>
+  <sql databaseId="oracle" id="PageSuffix">
+    <if test="page != null">
+      <![CDATA[ ) row_ ) where rownum_ > #{page.begin} and rownum_ <= #{page.end} ]]>
+    </if>
+  </sql>
+  <sql databaseId="mysql" id="PageSuffix">
+    <if test="page != null">
+      <![CDATA[ ) ___ttt___ limit #{page.begin}, #{page.rowsOfPage} ]]>
+    </if>
+  </sql>
+</mapper>

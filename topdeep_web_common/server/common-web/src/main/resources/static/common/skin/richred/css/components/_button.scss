@@ -1,0 +1,67 @@
+@charset "UTF-8";
+.sub-btn {
+  margin: 0 10px;
+  overflow: hidden;
+}
+.sub-btn1 {//block
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background-color:$color-red;
+  font-size: 16px;
+  color:$color-white;
+  text-align: center;
+  vertical-align: middle;
+  @include roundBox(6px);
+}
+.sub-btn-l {
+  @extend .sub-btn1;
+  width: 48%;
+  float: left;
+}
+.sub-btn-r {
+  @extend .sub-btn-l;
+  float: right;
+}
+
+.sub-btn2 {
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  @extend .sub-btn1;
+}
+.contrast{height: 30px;line-height: 30px;}
+.sub-btn3 {
+  @extend .sub-btn-r;
+  height: 30px;
+  line-height: 30px;
+  background-color:$color-white;
+  color: $font-base;
+}
+.group-btn {
+  @extend .flex;
+  .sub-btn {
+    @include flex();
+  }
+}
+.float-btn {
+  width: 30%;
+  position: absolute;
+  top: 2px;
+  right: 5px;
+}
+
+//灰色按钮
+.bg-orange {
+  background-color:$color-orange !important;
+}
+.bg-yellow {
+  background-color:$color-yellow !important;
+}
+.bg-gray {
+  background-color:$color-gray !important;
+}
+.disabled-btn {
+  background-color:$color-gray !important;
+}

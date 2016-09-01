@@ -1,0 +1,33 @@
+@charset "UTF-8";
+.history-date {
+  width: 270px;
+  margin-bottom: 10px!important;
+  &>span{
+    display: inline-block;
+    padding-left: 0;
+    padding-right: 0;
+    width: 70px;
+    float: left;
+    padding-top: 6px;
+  }
+  &>input{
+    padding-left: 5px;
+    padding-right: 0;
+    width: 196px!important;
+    float: right;
+  }
+}
+.history-search{//历史查询
+  //width: 270px;
+  &>a{
+    width: 270px;
+    padding-left:0;
+    padding-right:0;
+  }
+}
+//@media (min-width: 768px){
+//.form-inline .history-date {
+//  width: 270px;
+//  margin-bottom: 10px;
+// }
+//}

@@ -1,0 +1,99 @@
+@charset "UTF-8";
+.header+.table{
+  margin-top: 45px;
+}
+.table {
+  width: 100%;
+  height: auto;
+  border-collapse: collapse;
+  font-size: 14px;
+  position: relative;
+  tr {
+    th,
+    td {
+      text-align: center;
+      vertical-align: middle;
+      padding: 10px 0;
+      .table-title-s {
+        font-size: 12px;
+        color: #666666;
+      }
+    }
+  }
+}
+.table-flex {
+  tr{
+    @extend .flex;
+    td,
+    th
+    {
+      @include flex();
+    }
+  }
+  thead {
+  }
+  tbody {
+  }
+}
+.table-set{//设置支付额度
+  tr{
+    @extend .flex;
+    align-items: center;
+    -webkit-align-items: center;
+    cursor: pointer;
+    td,th{
+      @include flex($val:4);
+      &:nth-child(1){
+        @include flex($val:1);
+      }
+      &:nth-child(2){
+        @include flex($val:2);
+      }
+      &:nth-child(3){
+        @include flex($val:3);
+      }
+      a{
+        display: block;
+      }
+    }
+  }
+  thead{
+    tr{
+      th{
+        font-size: 13px;
+        color: $font-light;
+      }
+    }
+  }
+}
+.table-cash{//取现
+  @extend .table-set;
+  tr{
+    @extend .flex;
+    align-items: center;
+    -webkit-align-items: center;
+    cursor: pointer;
+    td,th{
+      @include flex($val:3);
+      &:nth-child(1){
+        @include flex($val:1);
+        padding-left: 10px;
+      }
+      &:nth-child(2){
+        @include flex($val:3);
+      }
+      &:last-child{
+        padding-right: 10px;
+      }
+      a{
+        display: block;
+      }
+    }
+  }
+  thead{
+    background-color: $color-gray;
+    th{
+      padding: 5px 0;
+    }
+  }
+}

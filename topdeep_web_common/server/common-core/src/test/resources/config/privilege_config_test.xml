@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?><Finance>
+<Message id="">
+<Configs id="Configs">
+<Privileges id="Privileges">
+<Privilege value="1"/>
+<Privilege value="2"/>
+<Privilege value="3"/>
+<Privilege value="20"/>
+<Privilege value="30"/>
+<Privilege value="31"/>
+<Privilege value="50"/>
+<Privilege value="51"/>
+<Privilege value="21"/>
+</Privileges>
+<FuncList id="FuncList">
+<Func value="b04"/>  
+<Func value="b05"/>
+<Func value="b06"/>
+<Func value="b07"/>  
+</FuncList>
+</Configs>
+</Message>
+</Finance>

@@ -1,0 +1,29 @@
+html,body,div,img,input,a,h2{margin: 0;padding: 0;}
+a{cursor: pointer;outline:0;text-decoration: none; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-touch-callout: none;}
+img {display:block;border: 0;vertical-align: top;width: 100%;}
+.main{width:100%; margin:0 auto; position:relative;}
+#main2{display: none;}
+.a1,.a2,.a3,.a4,.a5,.a6{display:block; position:absolute;border: 1px solid transparent;background-color: transparent;}
+.a1{width: 37%;height: 8%;top: 0;left: 63%;}
+input{vertical-align:middle;border: none;outline: none;width: 53%;height: 6%;line-height:normal;font-size: 15px;color: #b0b0b0;padding-left: 6%;font-weight:bold;letter-spacing: 2px;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+input:focus{outline: none;}
+.a2{ top: 53.5%;left: 22%;}
+.a3{top: 62%;left: 22%;}
+.a4{width: 59%;height: 5.7%;top: 71%;left: 22%;}
+.a5{width: 59%;height: 5.8%;top: 82%;left: 22%;}
+.a6{width: 59%;height: 5.5%;top: 60.8%;left: 22%;}
+.share {display: none;position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 10; }
+.share > img {display: block;width: 100%;height: 100%; }
+.dialog .cover {background: #000;position:fixed;left: 0;top: 0;width:100%;height: 100%;filter: alpha(opacity=70);-moz-opacity: 0.7;opacity: 0.7;z-index: 8; }
+.dialog .loading-content {width: 31px;height: 31px;margin: 0 auto;background: url("../images/loading.gif");background-repeat: no-repeat;-webkit-background-size:contain;background-size: contain;position: fixed;left: 50%;top:50%;margin-left: -16px;margin-top: -16px;z-index: 9;}
+.dialog .dialog-content {width: 90%;height: auto;background-color: #ffffff;border-radius: 5px;position: fixed;left: 5%;top: 30%;z-index: 9; }
+.dialog .dialog-content .dialog-style {width: 100%;text-align: center;margin: 20px 0; position: relative; }
+.dialog .dialog-content .dialog-style .dialog-close {display: block;width: 14px;height: 14px;padding: 6px;position: absolute;right: 5px;top: -15px;z-index: 9; }
+.dialog .dialog-content .dialog-style .dialog-close > i {display: inline-block;width: 14px;height: 14px;background: url(../images/icon_close.png) no-repeat center;background-size: contain; }
+.dialog .dialog-content .dialog-detail-m {text-align: center;margin: 0 auto;font-size: 16px; }
+.dialog .dialog-content .dialog-btn {width: 100%;text-align: center; }
+.dialog .dialog-content .dialog-btn > a {display: inline-block;width: 35%;line-height: 30px;margin: 10px auto; text-decoration: none;font-size: 16px;background-color: #fb4e47;color: #ffffff;  border: 0;  border-radius: 6px;  -webkit-border-radius: 6px;  -moz-border-radius: 6px; }
+.dialog .dialog-content .dialog-btn .btn-yellow {background-color: #ffc038; }
+html,body,.container{height:100%;}
+.bg-red{background-color:#e14538;}
+.bg-yellow{background-color:#f1d600;}

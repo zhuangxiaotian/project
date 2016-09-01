@@ -1,0 +1,19 @@
+# DEFAULT CACHE REGION
+
+
+jcs.region.cache30=DC
+jcs.region.cache30.cacheattributes=org.apache.commons.jcs.engine.CompositeCacheAttributes
+jcs.region.cache30.cacheattributes.MaxObjects=1000
+jcs.region.cache30.cacheattributes.MemoryCacheName=org.apache.commons.jcs.engine.memory.lru.LRUMemoryCache
+jcs.region.cache30.cacheattributes.UseMemoryShrinker=false
+jcs.region.cache30.cacheattributes.MaxMemoryIdleTime=3600
+jcs.region.cache30.cacheattributes.ShrinkerInterval=60
+jcs.region.cache30.elementattributes=org.apache.commons.jcs.engine.ElementAttributes
+jcs.region.cache30.elementattributes.IsEternal=false
+jcs.region.cache30.elementattributes.MaxLife=6
+jcs.region.cache30.elementattributes.IdleTime=1800
+jcs.region.cache30.elementattributes.IsSpool=true
+jcs.region.cache30.elementattributes.IsRemote=true
+jcs.region.cache30.elementattributes.IsLateral=true
+
+

@@ -1,0 +1,85 @@
+//style for tabs
+.fund-select
+{
+  color: #5a5a5a;
+  padding: 15px 0;
+  //border: 1px solid #dddddd;
+  @include roundBox($radius:3px);
+  &>ul {
+    overflow: hidden;
+    li {
+      list-style: none;
+      float: left;
+      margin-left: 10px;
+      line-height: 30px;
+      &>a {
+        font-size: 16px;
+        color:inherit;
+        text-align: center;
+        padding: 8px 15px;
+        @include roundBox($radius:5px);
+      }
+
+      a:hover
+      {
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #347ab8;
+      }
+      a:focus {
+        text-decoration: none;
+      }
+    }
+    li.current {
+      a {
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #347ab8;
+      }
+    }
+  }
+}
+.fund-select1
+{
+  color: #999999;
+  padding: 15px 0;
+  &>ul {
+    overflow: hidden;
+    li {
+      width: 49%;
+      list-style: none;
+      float: left;
+      margin-left: 0;
+      padding: 10px;
+      line-height: 30px;
+      border: 1px solid #dddddd;
+      text-align: center;
+      &:hover {
+        background-color: #347ab8;
+        p {
+          color: #ffffff;
+        }
+      }
+      p {
+        font-size: 14px;
+        color: #999999;
+        padding: 5px 0;
+        &>a {
+          color: #ff3333;
+        }
+      }
+      .select-title {
+        font-size: 20px;
+      }
+    }
+    li.select-r {
+      float: right;
+    }
+    li.active {
+      background-color: #347ab8;
+      p {
+        color: #ffffff;
+      }
+    }
+  }
+}

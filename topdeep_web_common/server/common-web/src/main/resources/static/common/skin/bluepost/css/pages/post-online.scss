@@ -1,0 +1,35 @@
+@charset "UTF-8";
+//投诉建议
+.post-online{//textarea
+  width: 660px;
+  margin: 10px auto;
+  resize: none;
+}
+.btn-message{
+  width: 660px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.online-tip{
+  color: #969696;
+}
+.answer{
+  padding: 20px 0;
+  border-bottom: 1px dashed #969696;
+  .question{
+    &>div{
+      line-height: 20px;
+      &>i{
+        margin-top: 4px;
+        margin-right:6px;
+      }
+    }
+    .question-content {
+      width: 800px;
+    }
+    .question-date{
+      width: 100px;
+      color: #969696;
+    }
+  }
+}

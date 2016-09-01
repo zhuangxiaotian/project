@@ -1,0 +1,138 @@
+@charset "UTF-8";
+.post-code-create{
+  text-align: center;
+  .form-group {
+    label{
+      font-weight: normal;
+      padding-right: 0;
+    }
+    .create-success {
+      font-size: 18px;
+    }
+    .post-code-input{//修改密码
+      display: inline-block;
+      width: 82%;
+    }
+  }
+}
+
+//开户
+.post-open {
+  margin-top: 10px;
+  .form-group {
+    label{
+      font-weight: normal;
+    }
+    .date-effect {
+      margin-top: 5px;
+      vertical-align: text-bottom;
+      &>input[type="checkbox"]{
+        vertical-align: text-bottom;
+        margin-bottom: 1px;
+      }
+    }
+    .open-tip{
+      padding-left: 0;
+      vertical-align: text-bottom;
+      &>input[type="checkbox"]{
+        vertical-align: text-bottom;
+        margin-bottom: 1px;
+      }
+    }
+  }
+}
+//对账单
+.form-bill {
+  margin:10px;
+  .bill-title{
+    line-height: 22px;
+  }
+  .bill-input{
+    position: relative;
+    width: 190px;
+    .bill-calendar{
+      position: absolute;
+      width: 48px;
+      height: 34px;
+      line-height: 34px;
+      bottom:0;
+      right: 0;
+      overflow: hidden;
+      &>div{
+        color: #666666;
+        float: left;
+        height: 100%;
+        .icon-calendar{
+          margin-top: 7px;
+          margin-right: 4px;
+        }
+        .caret-bill{
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          margin-left: 5px;
+          margin-top: 12px;
+          vertical-align: middle;
+          background: url("../images/arrow.png") no-repeat center;
+          -webkit-background-size: contain;
+          background-size: contain;
+          -moz-background-size: contain;
+          -o-background-size: contain;
+        }
+      }
+      .bill-border {
+        border-right: 1px solid #cccccc;
+      }
+    }
+  }
+
+}
+.bill-owner{
+  padding: 10px;
+  margin-top: 5px;
+  color: #666666;
+}
+.bill-odd {
+  background-color: #ebebeb;
+}
+.bill-even {
+  background-color: #f5f5f5;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+.bill-title,
+.bill-content
+{
+  border-right: 1px solid #ffffff;
+  padding: 5px 5px 5px 0;
+  text-align: right;
+}
+.bill-content{
+  text-align: left;
+  margin-left: -10px;
+}
+.border-right-n{
+  border-right: none;
+}
+.border-none{
+  border:none!important;
+}
+.bill-tip{
+  color: #969696;
+  margin-top: 20px;
+  .bill-tip-title{
+    color: #FF3333;
+  }
+  div{
+    line-height: 28px;
+    em{
+      font-style: normal;
+      font-size: 20px;
+    }
+  }
+  .risk-tip{
+  }
+}
+.bill-left{
+  margin-left: 15px;
+}

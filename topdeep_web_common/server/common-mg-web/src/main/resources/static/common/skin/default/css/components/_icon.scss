@@ -1,0 +1,47 @@
+@charset "UTF-8";
+//single image
+[class^=icon-]{
+  display: inline-block;
+  background:no-repeat center;
+  vertical-align:middle;
+  -webkit-background-size: contain;
+  background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+}
+
+$icon-list:cabinet,tip,calendar1,calendar2,dollar,narrow;
+@each $iconName in $icon-list {
+  .icon-#{$iconName} {
+    background-image: url('../images/icon_#{$iconName}.png');
+  }
+}
+.icon-tip {
+  width: 25px;
+  height:25px;
+  margin-right: 10px;
+}
+.icon-cabinet,
+.icon-calendar1,
+.icon-calendar2,
+.icon-narrow {
+  width: 50px;
+  height: 50px;
+}
+.icon-dollar {
+  width: 60px;
+  height: 50px;
+}
+
+
+//css sprites
+[class^=icons-]{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+[class^=icons-]{
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}

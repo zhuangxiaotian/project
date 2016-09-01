@@ -1,0 +1,76 @@
+@charset "UTF-8";
+//header
+.header {
+  height: auto;
+  line-height: 45px;
+  color:$color-red;
+  background-color: $bg-light;
+  @extend .flex;
+  a {
+    //font-size: 12px;
+  }
+  .title {
+    text-align: center;
+    font-size: 18px;
+  }
+  .investment-manage{//定投管理
+    padding-top: 4px;
+  }
+  .hl,
+  .hr {
+    @include flex();
+  }
+  .hl {
+    padding-left: 10px;
+    font-size: 16px;
+    .margin5{
+      margin-top: 5px;
+    }
+  }
+  .hr {
+    text-align: right;
+    padding-right: 10px;
+    .sub-check{
+      margin: 0;
+    }
+    .my-btn{
+      padding-top: 50px;
+      &>a{
+        height: 30px;
+        line-height: 30px;
+      }
+    }
+  }
+  .hr-lg {
+    font-size: 16px;
+    padding-left: 10px;
+    .icon-left{
+      margin-top: -2px;
+    }
+  }
+}
+.avatar {//我的头像
+  width: 100px;
+  height: 75px;
+  padding: 10px;
+  text-align: center;
+  &>img {
+    width: 75px;
+  }
+}
+.personal-msg{//个人信息
+  font-size: 14px;
+  color: $font-base;
+  line-height: 25px;
+  padding-top: 10px;
+  .icon-phone1,.icon-user
+  {
+    margin-bottom: 3px;
+  }
+}
+.my-set{//设置
+  &>a{
+    display: inline-block;
+    margin-right: 10px;
+  }
+}

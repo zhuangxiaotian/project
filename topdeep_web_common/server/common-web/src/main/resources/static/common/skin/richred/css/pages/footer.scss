@@ -1,0 +1,71 @@
+@charset "UTF-8";
+.footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  border-top: 1px solid $border-base;
+  background-color: $color-white;
+  ul.index-tab{
+    width: 100%;
+    min-height: 15px;
+    border-top:1px solid $border-light;
+    @extend .flex;
+    li{
+      @include flex($val:1);
+      text-align: center;
+      //padding-top:6px;
+      height: 52px;
+      a {
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        transform: scale(0.7);
+        -webkit-transform: scale(0.7);
+        -moz-transform: scale(0.7);
+        -o-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        &>p{
+          font-size: 16px;
+          color: $font-light2;
+          padding: 5px;
+        }
+        &:hover {
+          i.icon-home {
+            background-image: url(../images/icon_home1.png);
+          }
+          i.icon-finance {
+            background-image: url(../images/icon_finance1.png);
+          }
+          i.icon-assets{
+            background-image: url(../images/icon_assets1.png);
+          }
+          i.icon-account {
+            background-image: url(../images/icon_account1.png);
+          }
+          &>p {
+            color: $color-red;
+          }
+        }
+      }
+    }
+    li.active {
+      a {
+        i.icon-home {
+          background-image: url(../images/icon_home1.png);
+        }
+        i.icon-finance {
+          background-image: url(../images/icon_finance1.png);
+        }
+        i.icon-assets{
+          background-image: url(../images/icon_assets1.png);
+        }
+        i.icon-account {
+          background-image: url(../images/icon_account1.png);
+        }
+        &>p {
+          color: $color-red;
+        }
+      }
+    }
+  }
+}

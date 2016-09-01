@@ -1,0 +1,67 @@
+@charset "UTF-8";
+.tabbar-panel{
+  height: 100%;
+}
+//首页资产
+.bg-index{
+  width: 100%;
+  height: auto;
+  background: url("../images/bg_index.png") no-repeat center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  position: relative;
+}
+.bg-light{
+  background: url("../images/bg_light.png") repeat-x;
+}
+.bg-assets{
+  padding: 25px 0;
+  background: url("../images/bg_white.png") repeat-x;
+}
+.ccb-assets{//资产总额
+  font-size: 40px;
+  color: $font-yellow;
+  font-weight: 500;
+  padding: 2rem 0;
+  text-align: center;
+}
+.assets-number{
+  color: #7f5400;
+  font-size: 26px;
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+.trade-history{
+  margin-top: 0;
+  &:before{
+    content: " ";
+    width: 100%;
+    height: 1px;
+    color: #d9d9d9;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    border-top: 1px solid #d9d9d9;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+  }
+}
+
+//账单
+.fund-name{
+  line-height: 30px;
+}
+.trade-type{
+  padding-right: 3px;
+}
+.trade-detail{
+  padding-right: 15px;
+  color: $font-base;
+}
+.trade-value{//首页账单
+  text-align: right;
+  color: $font-base;
+}

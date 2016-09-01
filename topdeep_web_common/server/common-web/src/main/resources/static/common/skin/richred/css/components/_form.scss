@@ -1,0 +1,758 @@
+@charset "UTF-8";
+.sub-form {
+  height: auto;
+  margin-bottom: 10px;
+  li {
+    @extend .flex;
+    height: auto;
+    background-color: $color-white;
+    margin-bottom:2px;
+    padding: 5px 0;
+    label {
+      display: inline-block;
+      min-width: 90px;
+      height: 30px;
+      line-height: 30px;
+      padding-left:10px;
+      border-right: 1px solid $border-base;
+    }
+    label.investment-title {
+      border-right: 0;
+    }
+    .sub-box {
+      @include flex();
+    }
+    .sub-input {
+      @include  flex();
+      margin: 0 10px;
+      line-height: 30px;
+      position: relative;
+      input[type=text] {
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        &:focus {
+          color: $font-base;
+        }
+        &::-webkit-input-placeholder {
+          color: $font-light2;
+        }
+        &:-moz-placeholder {
+          color: $font-light2;
+        }
+        &:-ms-input-placeholder {
+          color: $font-light2;
+        }
+      }
+      input[type=password] {
+        @extend input[type=text];
+      }
+      input[readonly]:focus{
+        color: #ffffff;
+      }
+      input[class="sub-yzm"] {
+        display: inline-block;
+        width: 25%;
+        height: 26px;
+        line-height: 26px;
+        font-size: 14px;
+        color: $color-white;
+        text-align: center;
+        vertical-align: middle;
+        background-color: $color-red;
+        padding: 3px 0;
+        position: absolute;
+        right:0px;
+        top: -1px;
+        z-index: 99;
+        cursor: pointer;
+        @include roundBox(5px);
+      }
+      input[class="sub-send"] {
+        @extend input[class="sub-yzm"];
+        width: 40%;
+        background-color:$bg-gray;
+      }
+      input[class="sub-redeem"] {
+        @extend input[class="sub-yzm"];
+        width: 30%;
+        background-color:$color-yellow;
+      }
+      &>a{
+        display: block;
+        width: 100%;
+      }
+    }
+    .sub-choice {
+      @include flex();
+      .sub-radio {
+        padding-left: 15px;
+      }
+      .choice-detail {
+        padding-left: 30px;
+        text-align: left;
+      }
+    }
+    .sub-check {
+      margin: 0;
+    }
+    .sub-float {
+      display: inline-block;
+      position: absolute;
+      top: 8px;
+      right:0;
+    }
+    .fund-discount {//折扣
+      float: right;
+      margin-right: 10px;
+    }
+  }
+  li.list-s {//新增银行卡
+    font-size: 14px;
+    margin-bottom: 0;
+    color: $color-black;
+  }
+  li.login-list {
+    margin-bottom: 2px;
+  }
+  li.bill-diy { //定制账单
+    padding-top: 10px;
+    .diy {
+      padding-left: 10px;
+      padding-right: 5px;
+    }
+    .bill-choice {
+      @include flex();
+      .sub-check{
+        margin-bottom: 10px;
+        &>span{
+          color: $font-base;
+        }
+      }
+    }
+  }
+  li.dividend-create {//分红变更
+    padding: 0px 15px;
+    font-size: 16px;
+    margin-bottom: -1px;
+    &>div {
+      width: 100%;
+      padding: 10px 0;
+      border-bottom: 1px dashed $border-base;
+    }
+  }
+  li.risk-test {//风险评测
+    padding: 5px 10px;
+    font-size: 16px;
+    margin-bottom: -1px;
+    color: $font-light1;
+    .sub-radio {
+      margin: 0;
+    }
+    &:first-child {
+      color: $font-base;
+    }
+    .risk-tip {
+      @include flex();
+      margin-left: 10px;
+    }
+    .risk-tip-detail {
+      color: $font-light1;
+    }
+    &>img {
+      width:40px;
+      height:40px;
+    }
+  }
+
+}
+.form-trade {//交易明细
+  padding-bottom: 10px;
+  li {
+    .sub-input {
+      text-align: right;
+    }
+  }
+
+}
+
+.sub-form-s {
+  .login-list {
+    font-size: 16px;
+    color: $font-light1;
+  }
+}
+.sub-content {
+  margin: 15px 10px;
+  text-align: center;
+  .sub-title {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  .sub-content-detail {
+    font-size: 16px;
+    &>a {
+      color: $color-red;
+    }
+  }
+}
+.sub-content-l {
+  margin: 15px 10px;
+  text-align: left;
+  .icon-yellow{
+    margin-bottom: 5px;
+    margin-right: 3px;
+  }
+}
+.sub-content1{
+  margin: 10px;
+}
+
+
+//列表
+.sub-list {
+  padding: 0;
+  &>a{
+    display: block;
+  }
+  li {
+    padding: 0px 10px;
+    margin-bottom: 2px;
+    background-color: $color-white;
+    position: relative;
+    label {
+      display: inline-block;
+      width: 60px;
+      line-height: 40px;
+      text-align: center;
+      float: left;
+    }
+    span {
+      display: inline-block;
+      line-height: 40px;
+      vertical-align: middle;
+      &>i {
+        margin-bottom: 2px;
+      }
+    }
+    .question{//问题列表
+      color: $color-black;
+      line-height: 20px;
+      margin: 10px 0;
+      border-bottom:3px solid $color-red;
+    }
+    .answer{//问题解答
+      padding: 10px 0;
+      margin-top: 10px;
+      min-height: 50px;
+      word-wrap: break-word
+    }
+    .sub-r {
+      float: right;
+      font-size: 14px;
+      &>i {
+        margin-bottom: 2px;
+      }
+    }
+    .date-select{display:inline-block;padding-left: 45%;}
+    .sub-light {//淡色字体
+      color: $font-light1;
+    }
+    .sub-dark {
+      color: $color-black;
+    }
+    .icon-left {
+      float: right;
+    }
+    .fund-float {//浮动框
+      position: absolute;
+      top:0;
+      right: 0;
+      text-align: right;
+      font-size: 10px;
+      color: $color-white;
+      &>em {
+        display: inline-block;
+      }
+    }
+    .bank-add{//添加银行卡
+      padding: 7%;
+      text-align: center;
+      font-size: 20px;
+      margin: 0 auto;
+    }
+    .bank-unbind {//解绑
+      text-align: center;
+    }
+    .about{
+      display: inline-block;
+      margin: 10px 0;
+      overflow: hidden;
+      img{
+        width: 48px;
+        height: 48px;
+        float: left;
+      }
+      .about-title{
+        font-size: 22px;
+        float: left;
+        line-height: 35px;
+      }
+      .edition{
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+      }
+    }
+
+  }
+  .about-content{
+    text-align: center;
+    .about-detail{
+      text-align: left;
+      min-height: 100px;
+      .about-na {
+        text-indent: 28px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+.sub-list1 {//cover
+  @extend .sub-list;
+  padding: 0;
+  li {
+    padding: 5px 10px;
+    .icon-round{
+      margin: 16px 10px 0 0;
+    }
+    .icon-tip{
+      margin: 14px 10px 0 0;
+    }
+  }
+}
+.sub-list2 {//flex
+  @extend .sub-list;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    @extend .flex;
+    &>p {
+      padding: 10px 0;
+    }
+    .fund-type {
+      height: 20px;
+      line-height: 20px;
+      margin-left: 10px;
+      margin-top: 8px;
+    }
+    .msg{//消息
+      @include flex();
+      padding-left: 15px;
+      .msg-detail {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+    .time {
+      @include flex();
+      margin: 0;
+      padding-left: 10px;
+      text-align: left;
+    }
+    .time-detail{
+      @include flex();
+      padding-right: 10px;
+      text-align: right;
+    }
+  }
+  li.sub-radio {//选择赎回
+    margin: 2px 0;
+  }
+}
+.sub-list3 {
+  overflow: hidden;
+  background-color: $color-white;
+  //border-top: 1px solid $border-base;
+  border-bottom: 1px solid $border-gray;
+  li{
+    width: 49%;
+    padding: 10px 0;
+    float: left;
+    @extend .flex;
+    &>div{
+      text-align: center;
+      @include flex();
+    }
+    .user-gift {//新手礼
+      border-right: 1px solid $border-light;
+      padding-right: 3px;
+      .redpacket-numb {
+        font-style: italic;
+        font-size: 14px;
+        font-weight: bold;
+        color: $color-red;
+      }
+    }
+    .user-fu {
+      padding-left: 3px;
+    }
+  }
+}
+
+.sub-date {//时间
+  font-size: 14px;
+  color: $font-light2;
+}
+.sub-count {
+  display: inline-block;
+  font-size: 14px;
+  padding: 0 9px;
+  height: 25px;
+  line-height: 25px;
+  background-color: #e14a40;
+  color: $color-white;
+  border-radius: 50px;
+}
+.sub-yes {
+  display: inline-block;
+  font-size: 12px;
+  padding: 0 5px;
+  background-color: $color-red;
+  color: $color-white;
+  line-height: 25px;
+  border-radius: 5px;
+}
+
+//checkbox&radio
+.sub-check {
+  margin:10px;
+  height: auto;
+  position: relative;
+  &>span {
+    color: $font-light1;
+  }
+  &>i {
+    margin-bottom: 3px;
+    margin-right: 3px;
+  }
+
+}
+.sub-check1{
+  @extend .sub-check;
+  &>i{
+    background-image: url(../images/icon_checkbox_y.png);
+    width: 16px;
+    height: 16px;
+  }
+}
+.check-spc {
+  font-size: 14px;
+  &>span {
+    &>i {
+      margin-bottom: 3px;
+    }
+  }
+  .lost-yzm {
+    display: inline-block;
+    position: absolute;
+    color: $color-yellow;
+    right: 0;
+  }
+  @extend .sub-check;
+}
+.check-spc1 {
+  &>span{
+    &>i{
+      background-image: url(../images/icon_checkbox_y.png);
+    }
+  }
+}
+
+.sub-radio {
+  @extend .sub-check;
+  margin: 0 20px 10px;
+  &>i {
+    margin-right: 10px;
+  }
+  &>span {
+    font-size: 16px;
+    color: $color-black;
+  }
+}
+
+//提示
+.sub-tip {
+  margin: 5px 10px;
+  overflow: hidden;
+  font-size: 14px;
+  .erweima{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  &>p {
+    font-size: 16px;
+  }
+  .tip-detail {
+    font-size: 14px;
+    padding: 10px 0;
+    .icon-yellow{
+      margin: 0 5px;
+      margin-bottom: 2px;
+    }
+  }
+  .lost-pwd{
+    float: right;
+    font-size: 14px;
+    color: $color-orange;
+  }
+  .gift-tip {
+    color: $font-red;
+    @extend .lost-pwd;
+    &>i {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      background: url("../images/redpacketnew.png") no-repeat center;
+      vertical-align: middle;
+      -webkit-background-size: contain;
+      background-size: contain;
+    }
+  }
+  .gift-tip1 {
+    color: $font-red;
+    font-size: 16px;
+    text-align: center;
+    &>i {
+      margin-top: -2px;
+    }
+    &>em {
+      font-size: 22px;
+      font-style: normal;
+    }
+  }
+  .dividend-tip {
+    font-size: 14px;
+    color: $font-light1;
+  }
+  .investment-tip{
+    font-size: 18px;
+    text-align: center;
+  }
+  .sub-check {
+    margin: 0;
+  }
+}
+.sub-tip1{
+  @extend .sub-tip;
+  margin-top: -10px;
+}
+.warm-tips { //温馨提示
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  margin: 15px 0;
+  color: $font-light1;
+  &>div{
+    padding: 0 10px;
+  }
+  &>p {
+    font-size: 12px;
+    color: $font-light2;
+    padding:0 10px;
+  }
+  .copyright{
+    font-size: 14px;
+    color: $font-light2;
+    text-align: center;
+  }
+  .icon-yellow{
+    width:18px;
+    height:18px;
+    margin-right: 3px;
+    margin-bottom: 2px;
+  }
+}
+.tip-sm {
+  font-size: 12px;
+  color: $font-light2;
+}
+.tip-md {
+  font-size: 14px;
+  color: $font-light1;
+}
+.tip-lg {
+  font-size: 18px;
+  color: $font-light1;
+}
+
+//select
+.sub-select {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  @include  flex();
+  &>em {
+    display: inline-block;
+    font-size: 14px;
+    font-style: normal;
+    padding: 0px 50px 0px 20px;
+    line-height: 30px;
+    &>i{
+      margin-right: 5px;
+    }
+  }
+  &>span {
+    display: inline-block;
+    position: absolute;
+    width: 34px;
+    height: auto;
+    padding: 5px 0;
+    top:0;
+    right: 0;
+    text-align: center;
+    vertical-align: middle;
+    &>i {
+    }
+  }
+  .select-list {
+    width: 100%;
+    position: absolute;
+    background: #fff;
+    border: 1px solid $border-base;
+    height: auto;
+    left: 0;
+    top: 35px;;
+    z-index: 99;
+    border-top: 1px solid $border-base;
+    -ms-border-bottom-left-radius: 5px;
+    -moz-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    -ms-border-bottom-right-radius: 5px;
+    -moz-border-bottom-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    &>li {
+      height: 30px;
+      line-height: 30px;
+      padding:5px 20px;
+      &>a{
+        color: $font-light1;
+        cursor: pointer;
+        &>i {
+          margin-right: 5px;
+        }
+      }
+      &:last-child {
+        border-bottom: 0px;
+      }
+      &:hover {
+        background-color: $bg-base;
+      }
+    }
+  }
+}
+.sub-select2{
+  display: block;
+  //width: 100%;
+  height: auto;
+  border-right:transparent!important;
+  position: relative;
+  .select-list {
+    width: 100%;
+    position: absolute;
+    background: #fff;
+    border: 1px solid $border-base;
+    height: auto;
+    left: 0;
+    top: 40px;
+    z-index: 99;
+    border-top: 1px solid $border-base;
+    -ms-border-bottom-left-radius: 5px;
+    -moz-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    -ms-border-bottom-right-radius: 5px;
+    -moz-border-bottom-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    &>li {
+      height: 30px;
+      line-height: 30px;
+      padding:0 10px;
+      &>a{
+        color: $font-light1;
+        cursor: pointer;
+        &>i {
+          margin-right: 5px;
+        }
+      }
+      &:last-child {
+        border-bottom: 0px;
+      }
+      &:hover {
+        background-color: $bg-base;
+      }
+    }
+  }
+}
+//基金列表选择框
+.sub-select3{
+  @extend .sub-select2;
+  .select-list {
+    top: 30px;
+  }
+}
+.data-select{
+  padding-right:20px!important;
+  position: relative;
+}
+.data-range{
+  position: absolute;
+  top: 10px;
+  right:0;
+  padding: 0 10px;
+  z-index: 99;
+}
+//select for 交易查询
+.select-trade {
+  .select-detail{
+    padding-right: 3px;
+  }
+}
+.select-state{
+  width: 100%;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  z-index: 99;
+  background-color: #ffffff;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  &>li{
+    padding:0 10px;
+    &>a{
+      display: block;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    &:last-child{
+      a{
+        border-bottom: transparent;
+      }
+    }
+  }
+}
+
+.tip-discount {
+  color: $color-red;
+  font-size: 14px;
+}
+.trend-tip {
+  color: $font-light1;
+  text-decoration: line-through;
+}

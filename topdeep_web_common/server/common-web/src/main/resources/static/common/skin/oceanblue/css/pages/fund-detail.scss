@@ -1,0 +1,339 @@
+@charset "UTF-8";
+.container-fund{
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+.fund-product{//基金产品
+  margin-top: 15px;
+  background-color: #ffffff;
+}
+//数据
+.product-data{
+  background-color: #ffffff;
+  .data-chart{//图表
+    padding: 10px;
+  }
+  .data-time{
+    display: block;
+    width: 90%;
+    height: 25px;
+    line-height: 25px;
+    color: #fff;
+    margin: 0 auto;
+    font-size: 1rem;
+    text-align: center;
+    background-color:$color-blue;
+    @include roundBox($radius:3px);
+    &.active{
+      background-color: #7ab8fe;
+    }
+  }
+}
+
+//
+.iscroll_wrapper{
+  position: absolute;
+  top: 292px;
+  left: 0;
+  bottom: 60px;
+  z-index: 100;
+  width: 100%;
+  overflow-y: scroll;
+}
+.iscroll_wrapper1{
+  @extend .iscroll_wrapper;
+  top:250px;
+  bottom: 0;
+}
+.pullup{
+  padding: 5px 10px;
+  font-size: 1.2rem;
+  color: #888;
+  text-align: center;
+  .icon-pull {
+    display: block;
+    width: 16px;
+    height: 10px;
+    margin: 0 auto;
+    background:  url(../images/icon_pull.png) 0 0 no-repeat;
+    -webkit-background-size:contain;
+    background-size:contain;
+    -webkit-transition: -webkit-transform 250ms;
+  }
+  .label{text-align: center}
+}
+.pullup .flip{
+  .icon-pull {
+    -webkit-transform: rotate(-180deg) translateZ(0);
+  }
+}
+.pullup .loading{
+  .icon {
+    background-position: 0 100%;
+    -webkit-transform: rotate(0deg) translateZ(0);
+    -webkit-transition-duration: 0ms;
+    -webkit-animation-name: loading;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+  }
+}
+//资产详情
+.fund-zzb{
+  width: 100%;
+  margin-top: 45px;
+  margin-bottom: 15px;
+  padding-bottom: 25px;
+  position: relative;
+  &>img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: -99;
+  }
+  .breakeven{//区间盈亏
+    padding:0 0 10px;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #ffffff;
+  }
+  .assets-total{//总资产
+    @extend .breakeven;
+  }
+  .date{//数据日期
+    display: inline-block;
+    text-align: right;
+    color: #666666;
+    font-size: 1.2rem;
+    padding:10px 0;
+    position: absolute;
+    top:0;
+    right:10px;
+    z-index: 99;
+    &>a{
+      display: block;
+      color: #ffffff;
+      font-size: 1.4rem;
+    }
+
+
+  }
+  .assets-number{
+    color: #fde36b;
+    font-size:2.6rem;
+    font-weight: bold;
+    text-align: center;
+    padding:30px 0 10px;
+
+  }
+}
+.assets-detail{//资产详情&产品详情
+  @extend .fund-zzb;
+  padding-top: 20px;
+  padding-bottom: 0;
+  .assets-number{
+    color: #fde36b;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+}
+.assets-shares{//盈亏
+  @extend .flex;
+  @include boxSizing($val:border-sizing);
+  position: relative;
+  &>div{
+    @include flex();
+    padding: 15px 0 5px;
+    text-align: center;
+    color: #ffffff;
+    .data{
+      font-size: 1.6rem;
+    }
+    .data.yellow{font-size:2rem;font-weight: bold;}
+  }
+  .divider{
+    width: 1px;
+    height: 12px;
+    background:rgba(255,255,255,0.3);
+    position: absolute;
+    left: 50%;
+    top:15px;
+  }
+}
+.assets-get{
+  &>div{
+    padding: 25px 0 5px;
+  }
+}
+.assets-fund{//基金
+  margin-bottom: 5px;
+  .flex-cell{
+    text-align: center;
+    .shares-number{
+      font-size: 1.6rem;
+    }
+  }
+  .sub-cell{
+    border-bottom: none;
+    -webkit-align-items: center;
+    align-items: center;
+    .d{//菱形
+      width:8px;
+      height:8px;
+      margin:0 10px 0 0;
+      background:#1b75da;
+      -webkit-transform:rotate(45deg);
+      transform:rotate(45deg);
+    }
+    .fund-name{
+      font-size: 1.6rem;
+    }
+    .icon-right{//右键头
+      height: 15px;
+    }
+  }
+
+  .fund-shares{
+    background: url("../images/bg_fundDetail.png") no-repeat bottom;
+    -webkit-background-size: contain;
+    background-size: contain;
+    margin-top: -10px;
+    position: relative;
+    .icon-right{
+      display: block;
+      width: 10px;
+      height: 15px;
+      position: absolute;
+      right: 10px;
+      top:28px;
+    }
+    .divider{
+      width: 1px;
+      height: 40px;
+      background:rgba(0,0,0,0.1);
+      position: absolute;
+      left: 50%;
+      top:18px;
+    }
+  }
+}
+.zzb-name{//增值宝交易明细
+  font-size: 1.6rem;
+  color:$color-blue;
+}
+.line-blue{
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  &>div{
+    margin: 0 10px;
+    height: 2px;
+    background-color: $color-blue;
+  }
+}
+//交易明细
+.cell-fr{
+  text-align: center;
+}
+.arrow-right{
+  padding:10px 0 0 5px;
+}
+//区间盈亏
+.box-breakeven{
+  border-top: 1px solid rgba(102,102,102,0.2);
+  border-bottom: 1px solid rgba(102,102,102,0.2);
+  &>.sub-cell{
+    -webkit-align-items: center;
+    align-items: center;
+  }
+}
+.date-name{padding-right: 10px;}
+.date-select{//自选日期
+  padding: 5px 0;
+  position: relative;
+  &>label{
+    display: inline-block;
+    padding-right: 5px;
+  }
+  &>input{
+    display: inline-block;
+    width:100%;
+    height:20px;
+    line-height:20px;
+    border:1px solid rgba(102,102,102,0.2);
+    text-align: center;
+    background-color: transparent;
+  }
+  &>.icon-right{
+    width: 10px;
+    height: 15px;
+    position: absolute;
+    top:10px;
+    right:2%;
+  }
+}
+.btn-search{
+  padding-left: 15px;
+  &>a{
+    display: block;
+    font-size: 1.8rem;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    background: #1b75da;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 15px 0;
+    @include roundBox($radius:10px);
+  }
+}
+
+//资讯视点
+.hot{//热点咨讯
+  margin: 15px 0;
+  .hot-shots{//热点
+    border-bottom:none;
+  }
+  .hot-diamond{//菱形
+    padding-right: 10px;
+  }
+  .hot-question{//观点
+    @include flex();
+  }
+  .hot-date{//日期
+    text-align: right;color: #666666;}
+  .hot-detail{
+    height: 29px;
+    margin: 0 10px 0 30px;
+    padding: 10px 0;
+    overflow: hidden;
+    border-top: 1px dashed rgba(0,0,0,0.2);
+    font-size: 1.2rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .hot-open{
+    height: auto;
+    white-space: normal;
+  }
+}
+.viewport{padding: 10px}
+.viewport-title{font-size: 1.8rem;padding: 5px 0;}
+.viewport-date{
+  font-size: 1.4rem;
+  color: #666666;
+  padding-bottom:5px;}
+.viewport-pic{
+  &>img{
+    display: block;
+    border: 0;
+    width: 100%;
+  }
+}
+.viewport-detail{
+  padding: 10px 0;
+}

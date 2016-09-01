@@ -1,0 +1,21 @@
+@charset "UTF-8";
+.post-page {
+  width: 100%;
+  text-align: center;
+}
+.post-pagination {
+  &>li {
+    &>a {
+      color: #666666;
+      &:focus {
+        color: #666666;
+      }
+    }
+  }
+  &>li.cur{
+    &>a {
+      background-color:#05b1ea;
+      color: #ffffff;
+    }
+  }
+}

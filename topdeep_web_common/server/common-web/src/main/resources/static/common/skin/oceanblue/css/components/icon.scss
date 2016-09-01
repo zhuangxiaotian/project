@@ -1,0 +1,121 @@
+@charset "UTF-8";
+//single
+[class^=icon-] {
+  display: inline-block;
+  background: no-repeat center;
+  vertical-align: middle;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+//fund-tag
+.icon-tag1 {
+  background-image: url(../images/icon_tag1.png);
+  width: 16px;
+  height: 16px;
+}
+.icon-tag2 {
+  background-image: url(../images/icon_tag2.png);
+  width: 16px;
+  height: 16px;
+}
+.icon-tag3 {
+  background-image: url(../images/icon_tag3.png);
+  width: 16px;
+  height: 16px;
+}
+//箭头
+.icon-right{
+  background-image: url(../images/icon_right.png);
+  width: 10px;
+  height: 18px;
+}
+.icon-down{
+  background-image: url(../images/icon_down.png);
+  width: 12px;
+  height: 8px;
+}
+.icon-up{
+  background-image: url(../images/icon_up.png);
+  width: 12px;
+  height: 8px;
+}
+.icon-bottom{
+  background-image: url(../images/icon_bottom.png);
+  width: 7px;
+  height: 15px;
+}
+.icon-top{
+  background-image: url(../images/icon_top.png);
+  width: 7px;
+  height: 15px;
+}
+
+.icon-search{//搜索
+  background-image: url(../images/icon_search.png);
+  width: 20px;
+  height:20px;
+}
+.icon-search-blue{//搜索
+  background-image: url(../images/icon_search_blue.png);
+  width: 20px;
+  height:20px;
+}
+.icon-diamond{//菱形
+  background-image: url(../images/icon_diamond.png);
+  width: 10px;
+  height:10px;
+}
+.icon-collect{//收藏
+  background-image: url(../images/icon_collect.png);
+  width: 20px;
+  height:20px;
+}
+.icon-collect-s{//收藏
+  background-image: url(../images/icon_collect_s.png);
+  width: 20px;
+  height:20px;
+}
+.icon-des{//描述
+  background-image: url(../images/icon_des.png);
+  width: 20px;
+  height:20px;
+}
+.icon-share{//分享
+  background-image: url(../images/icon_share.png);
+  width: 20px;
+  height:20px;
+}
+//radio
+.icon-radio{
+  background-image: url(../images/icon_radio.png);
+  width: 14px;
+  height:14px;
+}
+.icon-radio-s{
+  background-image: url(../images/icon_radio_s.png);
+  width: 14px;
+  height:14px;
+}
+.icon-tip{//温馨提示
+  background-image: url(../images/icon_tip.png);
+  width: 16px;
+  height:16px;
+}
+
+
+//bank
+$bank-name:b001,b002,b003,b004,b005,b006,b007,b008,b009,b010,b011,b012,b013,b014,b015,b016,b017,b018,b019,b200,b201,b202,b203,b204;
+@each $bankName in $bank-name {
+  .bank-#{$bankName} {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 3px;
+    background: no-repeat center;
+    vertical-align: middle;
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-image: url('../images/bank_#{$bankName}.png');
+
+  }
+}

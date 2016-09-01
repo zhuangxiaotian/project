@@ -1,0 +1,213 @@
+@charset "UTF-8";
+//icon-bar for phone
+.sub-bar>span{
+  background-color: #333;
+}
+//text占位
+.text-placeholder{
+  font-style: normal;
+  visibility: hidden;
+}
+//基金产品
+.sub-content {
+  margin-bottom: 10px;
+  .sub-title {
+    padding:5px;
+    &>span {
+      font-weight: bold;
+      font-size: 22px;
+      color: #333333;
+      padding-left: 10px;
+      border-left: 3px solid #0a6bb0;
+
+    }
+    &>a {
+      float: right;
+      font-size: 14px;
+      color: #ff3333;
+      margin-top: 5px;
+    }
+    &>button {
+      float: right;
+      font-size: 16px;
+      &>i {
+        margin-bottom: 2px;
+      }
+    }
+    &>i {
+      font-style: normal;
+      color: #666666;
+      font-size: 16px;
+      margin-left: 10px;
+    }
+    .post-bill{
+      text-align: center;
+      font-size: 22px;
+    }
+  }
+
+  //添加上边框
+  .sub-body {
+    border-top: 1px solid #dddddd;
+  }
+}
+
+.fund-recommend {
+  width: 310px;
+  height: 250px;
+  margin-bottom: 10px;
+  position: relative;
+  .fund-style {
+    width: 70px;
+    vertical-align: middle;
+    text-align: center;
+    position:absolute;
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    -webkit-transform: rotate(-18deg);
+    -moz-transform: rotate(-18deg);
+    -o-transform: rotate(-18deg);
+    transform: rotate(-18deg);
+    top: 19px;
+    left: 9px;
+    color: #ffffff;
+    font-size: 16px;
+    z-index: 9;
+  }
+  .fund-detail {
+    width: 100%;
+    padding: 10px 15px;
+    position: absolute;
+    top: 42px;
+    left: 5px;
+    .fund-name {
+      display: inline-block;
+      width: 180px;
+      //line-height: 60px;
+      vertical-align: middle;
+      text-align: center;
+      padding: 0 10px;
+      margin-top: 16px;
+      color: #333333;
+      font-size: 20px;
+      word-wrap: break-word;
+      word-break: normal;
+      float: left;
+    }
+    .fund-earn {
+      display: inline-block;
+      width: 100px;
+      float: right;
+      &>dl {
+        display: inline-block;
+        text-align: center;
+        &>dt {
+          font-size: 28px;
+          font-weight: 500;
+          color: #ff3333;
+        }
+        &>dd {
+          color: #666666;
+        }
+      }
+    }
+
+  }
+  .fund-light {
+    width: 100%;
+    padding: 10px 15px;
+    position: absolute;
+    bottom:0;
+    left: 5px;
+    &>ul {
+      width: 100%;
+      overflow: hidden;
+      &>li{
+        display: block;
+        width: 80px;
+        float: left;
+        text-align: center;
+        margin-left: 10px;
+        img {
+          width: 45px;
+          height: 45px;
+        }
+        .fund-light-detail {
+          text-align: center;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
+
+//基金之旅
+.fund-travel {
+  padding: 10px;
+  &>img {
+    margin-left: 4%;
+  }
+  .fund-operate {
+    display: inline-block;
+    margin-left: 4%;
+    &>dt {
+      text-align: center;
+      font-weight: normal;
+    }
+  }
+  &>span {
+    font-size: 16px;
+  margin-left: 2%;
+}
+}
+.fund-travel-button {
+  margin-top: 40px;
+}
+
+//浮动框
+.post-code {
+  position: fixed;
+  top:28%;
+  right: -10px;
+  width:150px;
+  z-index: 9999;
+  &>div {
+    width: 100%;
+    &>a {
+      display: block;
+      width: 100%;
+      top: 0;
+      &>img {
+        width: 150px;
+        margin: 0 auto;
+      }
+    }
+    &>img {
+      width: 150px;
+      margin: 0 auto;
+    }
+  }
+}
+.bank {
+  margin-left: 10px;
+}
+//超时页面
+.timeoutr{
+  width: 100%;
+  padding-top: 30%;
+  text-align: center;
+  &>a{
+    display: inline-block;
+    color: #337ab7;
+    font-size: 16px;
+  }
+}
+
+//
+.red{
+  color: #ff3333;
+  font-size: 16px;
+}
+.through{
+  color: #969696;
+  text-decoration: line-through;
+}

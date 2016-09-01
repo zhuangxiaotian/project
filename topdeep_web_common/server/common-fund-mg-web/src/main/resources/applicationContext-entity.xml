@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	                    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	                    http://www.springframework.org/schema/tx
+	                    http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+	                    http://www.springframework.org/schema/jee
+	                    http://www.springframework.org/schema/jee/spring-jee-3.0.xsd
+	                    http://www.springframework.org/schema/context
+	                    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	                    http://www.springframework.org/schema/aop
+	                    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+	                    http://www.springframework.org/schema/util 
+      					http://www.springframework.org/schema/util/spring-util-3.0.xsd"
+	default-lazy-init="false">
+
+	<description>Entity</description>
+	<context:annotation-config />
+	<context:component-scan base-package="topdeep.common,topdeep.commonfund" >
+		<context:exclude-filter type="assignable" expression="topdeep.common.mg.action.home.NavAction"/>
+	</context:component-scan>
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
+		<property name="ignoreResourceNotFound" value="false" />
+		<property name="locations">
+			<list>
+				<value>classpath*:/application.properties</value>
+			</list>
+		</property>
+	</bean>
+	<util:properties id="application" location="classpath:application.properties"></util:properties>
+	<bean id="applicationContext" class="topdeep.common.util.ApplicationContextHelper"></bean>
+
+	<!-- datasource start -->
+
+	 <bean id="commonDataSource" class="org.springframework.jndi.JndiObjectFactoryBean"> 
+		<property name="jndiName"> 
+			<value>${dbcommon.jndiname}</value> 
+		</property> 
+	</bean>
+ 	
+	<bean id="commonVendorProperties"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="properties">
+			<props>
+				<prop key="SQL Server">sqlserver</prop>
+				<prop key="DB2">db2</prop>
+				<prop key="Oracle">oracle</prop>
+				<prop key="MySQL">mysql</prop>
+				<prop key="H2">h2</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="commonDatabaseIdProvider" class="org.apache.ibatis.mapping.VendorDatabaseIdProvider">
+		<property name="properties" ref="commonVendorProperties" />
+	</bean>
+	<bean id="commonSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="commonDataSource" />
+		<property name="databaseIdProvider" ref="commonDatabaseIdProvider" />
+	</bean>
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="topdeep.common.entity.base, topdeep.common.entity.db,topdeep.common.entity.view" />
+		<property name="sqlSessionFactoryBeanName" value="commonSqlSessionFactory"></property>
+		<property name="nameGenerator" ref="topdeepBeanNameGenerator"></property>
+	</bean>
+	
+	<bean id="topdeepBeanNameGenerator" class="topdeep.common.util.TopdeepBeanNameGenerator"></bean>
+
+	<!-- datasource end -->
+	
+	<!-- datasource start -->
+
+	 <bean id="fundCommonDataSource" class="org.springframework.jndi.JndiObjectFactoryBean"> 
+		<property name="jndiName"> 
+			<value>${dbFundCommon.jndiname}</value> 
+		</property> 
+	</bean>
+ 	
+	<bean id="fundCommonVendorProperties"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="properties">
+			<props>
+				<prop key="SQL Server">sqlserver</prop>
+				<prop key="DB2">db2</prop>
+				<prop key="Oracle">oracle</prop>
+				<prop key="MySQL">mysql</prop>
+				<prop key="H2">h2</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="fundCommonDatabaseIdProvider" class="org.apache.ibatis.mapping.VendorDatabaseIdProvider">
+		<property name="properties" ref="fundCommonVendorProperties" />
+	</bean>
+	<bean id="fundCommonSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="fundCommonDataSource" />
+		<property name="databaseIdProvider" ref="fundCommonDatabaseIdProvider" />
+	</bean>
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="topdeep.commonfund.entity.db,topdeep.commonfund.entity.view" />
+		<property name="sqlSessionFactoryBeanName" value="fundCommonSqlSessionFactory"></property>
+		<property name="nameGenerator" ref="topdeepBeanNameGenerator"></property>
+	</bean>
+	
+	<!-- datasource end -->
+	
+	<!-- 系统缓存 -->
+	<!-- 
+	<bean id="baseInfoCache" class="common.cache2.impl.JcsCache">
+		<constructor-arg value="baseinfo"></constructor-arg>
+	</bean>
+	<bean id="sessionCache" class="common.cache2.impl.JcsCache">
+		<constructor-arg value="session"></constructor-arg>
+	</bean>
+
+	<bean id="cache90" class="common.cache2.impl.JcsCache">
+		<constructor-arg value="cache90"></constructor-arg>
+	</bean>
+
+	<bean id="cache30" class="common.cache2.impl.JcsCache">
+		<constructor-arg value="cache30"></constructor-arg>
+	</bean>
+	<bean id="cache15" class="common.cache2.impl.JcsCache">
+		<constructor-arg value="cache15"></constructor-arg>
+	</bean>
+	<bean id="cache5" class="common.cache2.impl.JcsCache">
+		<constructor-arg value="cache5"></constructor-arg>
+	</bean>
+	<bean id="cache1" class="common.cache2.impl.JcsCache">
+		<constructor-arg value="cache1"></constructor-arg>
+	</bean>
+	 -->
+	<bean id="commonSessionManage" class="topdeep.common.entity.ManageSession">
+	    <aop:scoped-proxy />
+	</bean>
+	<bean id="commonSession" class="topdeep.common.mg.entity.CommonSession" scope="session">
+		<aop:scoped-proxy />
+	</bean>
+	<bean id="webUserRuntimeBiz" class="topdeep.common.mg.biz.impl.CommonWebUserRuntimeBiz"></bean>
+	
+<!-- 	<bean id="myTask" class="topdeep.common.mg.biz.common.impl.CommonMgSystemBiz"/>  -->
+  
+<!-- 	 <bean id="schedulerTask" class="org.springframework.scheduling.timer.MethodInvokingTimerTaskFactoryBean"> -->
+<!-- 	    <property name="targetObject" ref="myTask" /> -->
+<!-- 	    <property name="targetMethod" value="sendEmailTask" /> -->
+<!-- 	</bean> -->
+ 
+<!-- 	<bean id="timerTask"  class="org.springframework.scheduling.timer.ScheduledTimerTask"> -->
+<!-- 	    <property name="timerTask" ref="schedulerTask" /> -->
+<!-- 	    <property name="delay" value="1000" /> -->
+<!-- 	    <property name="period" value="60000" /> -->
+<!-- 	</bean> -->
+ 
+<!-- 	<bean class="org.springframework.scheduling.timer.TimerFactoryBean"> -->
+<!-- 	    <property name="scheduledTimerTasks"> -->
+<!-- 	        <list> -->
+<!-- 	            <ref local="timerTask" /> -->
+<!-- 	        </list> -->
+<!-- 	    </property> -->
+<!-- 	</bean>  -->
+	<bean id="cache30" class="common.cache2.impl.Jcs2Cache">
+		<constructor-arg value="cache30"></constructor-arg>
+	</bean>
+</beans>

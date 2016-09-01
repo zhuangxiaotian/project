@@ -1,0 +1,67 @@
+@charset "UTF-8";
+.dividend {
+  margin-bottom:10px;
+  background-color: $color-white;
+  &>div {
+    padding: 0 10px;
+  }
+  .dividend-title {
+    padding: 5px 0 5px 10px;
+    font-size: 16px;
+    &>span {
+      display: inline-block;
+      border-left: 3px solid $color-red;
+      padding-left: 10px;
+    }
+  }
+  .dividend-detail {
+    margin: 0 15px;
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: $bg-pink1;
+  }
+}
+
+//交易明细
+.trade-detail {
+  background-color: $bg-light;
+  text-align: center;
+  .trade-detail-title {
+    color: $font-base;
+    font-size: 18px;
+  }
+  .trade-none{//未确认
+    padding-left: 35px;
+  }
+  .trade-detail-content {
+    float: left;
+    line-height: 30px;
+    margin-left: 15px;
+    &:first-child {
+      margin-left: 0;
+    }
+    &>img{
+      width: 52px;
+    }
+    .trade-name{
+      color: $font-base;
+      font-size: 14px;
+      line-height: 25px;
+      text-align: left;
+    }
+    .trade-sure {
+      font-size: 14px;
+      line-height: 25px;
+    }
+  }
+}
+.trade-detail-tip{
+  background-color: $bg-light;
+  padding: 5px 0;
+  .center{
+    &>img{
+      width: 50px;
+      height: 50px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@charset "UTF-8";
+//登录注册页面
+.login{
+  padding-left:10px;
+  padding-right:10px;
+}
+.lost-pwd{//忘记密码
+  display: block;
+  color: $color-blue;
+}
+.login-tip{//用户指引
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
+  margin-top: -10px;
+  &>a{
+    display: inline-block;
+    padding: 3px 10px;
+    color:#9a9a9a;
+    &:first-child{
+      border-right: 1px solid rgba(0,0,0,0.1);
+    }
+  }
+}

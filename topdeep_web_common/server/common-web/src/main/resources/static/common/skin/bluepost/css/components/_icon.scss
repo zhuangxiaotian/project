@@ -1,0 +1,182 @@
+@charset "UTF-8";
+//single image
+[class^=icon-]{
+  display: inline-block;
+  background:no-repeat center;
+  vertical-align:middle;
+  -webkit-background-size: contain;
+  background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+}
+
+$icon-list:phone,select,step,up,down,user,add,search,calendar,hot,tip;
+@each $iconName in $icon-list {
+  .icon-#{$iconName} {
+    background-image: url('../images/icon_#{$iconName}.png');
+  }
+}
+.icon-phone {
+  width: 16px;
+  height:16px;
+  margin-right: 10px;
+}
+.icon-select {
+  width: 15px;
+  height: 15px;
+}
+.icon-step {
+  width: 100px;
+  height: 22px;
+}
+.icon-up,
+.icon-down
+{
+  width: 10px;
+  height:17px;
+}
+.icon-stable {
+  width: 10px;
+  height: 17px;
+}
+.icon-user {
+  width: 30px;
+  height: 30px;
+}
+.icon-add{
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.icon-cabinet,
+.icon-calendar1,
+.icon-calendar2,
+.icon-narrow {
+  width: 50px;
+  height: 50px;
+}
+.icon-dollar {
+  width: 60px;
+  height: 50px;
+}
+
+//日历
+.icon-calendar {
+  width: 19px;
+  height: 19px;
+}
+.icon-hot {//热销
+  width: 20px;
+height: 16px;
+}
+
+//投诉建议
+.icon-tip{
+  width: 11px;
+  height: 11px;
+}
+
+
+
+
+
+
+
+
+//serch
+.icon-search {
+  width: 20px;
+  height: 20px;
+}
+
+//css sprites
+[class^=icons-]{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+[class^=icons-]{
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+//bank
+$icon-bank:001_001,001-002,001-003,001-004,001-005,001-006,001-007,001-008,001-009,001-010,001-011,001-012,001-013,002-99,003-012;
+
+.icon-001-001 {
+  background-image: url('../images/ps_001_001.png');
+  width: 30px;
+  height: 30px;
+}
+.icon-001-002 {
+  background-image: url('../images/ps_001_002.png');
+  width: 30px;
+  height: 30px;
+}
+.icon-001-003 {
+  background-image: url('../images/ps_001_003.png');
+  width: 30px;
+  height: 30px;
+}
+.icon-001-004 {
+  background-image: url('../images/ps_001_004.png');
+  width: 30px;
+  height: 30px;
+}
+.icon-001-005 {
+  background-image: url('../images/ps_001_005.png');
+  width: 30px;
+  height: 30px;
+}
+.icon-001-006 {
+  background-image: url('../images/ps_001_006.png');
+  width: 30px;
+  height: 30px;
+}
+.icon-001-007 {
+  background-image: url('../images/ps_001_007.png');
+  width: 30px;
+  height: 30px;
+}
+.icon-001-008 {
+  background-image: url('../images/ps_001_008.png');
+  width: 30px;
+  height: 30px;
+}
+.icon-001-009 {
+  background-image: url('../images/ps_001_009.png');
+  width: 30px;
+  height: 30px;
+}
+.icon-001-010 {
+  background-image: url('../images/ps_001_010.png');
+  width: 30px;
+  height: 30px;
+}
+.icon-001-011 {
+  background-image: url('../images/ps_001_011.png');
+  width: 30px;
+  height: 30px;
+}
+.icon-001-012 {
+  background-image: url('../images/ps_001_012.png');
+  width: 30px;
+  height: 30px;
+}
+.icon-001-013 {
+  background-image: url('../images/ps_001_013.png');
+  width: 30px;
+  height: 30px;
+}
+.icon-002-99 {
+  background-image: url('../images/ps_002_99.png');
+  width: 30px;
+  height: 30px;
+}
+.icon-003-012 {
+  background-image: url('../images/ps_003_012.png');
+  width: 30px;
+  height: 30px;
+}

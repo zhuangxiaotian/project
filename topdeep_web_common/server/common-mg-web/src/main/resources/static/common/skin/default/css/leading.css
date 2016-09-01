@@ -1,0 +1,157 @@
+@charset "utf-8";
+/* CSS Document */
+body, form, p, ul, li, div, a, ol{padding:0; margin:0;}
+li{ list-style:none;}
+#wizard {font-size:12px;height:480px;width:598px;position:relative; overflow:hidden;}
+#wizard .items{width:20000px; clear:both; position:absolute;}
+#wizard .right{float:right;}
+#wizard #status{height:35px;background-color:#123;width:598px;}
+#status li{float:left;color:#fff;padding:10px 30px;}
+#status li.active{background-color:#369;font-weight:normal;}
+.input{width:240px; height:18px; margin:10px auto; line-height:20px; border:1px solid #d3d3d3; padding:2px}
+.page{width:598px;float:left; overflow:hidden}
+.page h3{height:42px; font-size:16px;  margin-bottom:20px; padding-bottom:5px;}
+.page .header1{
+  border-bottom:1px dotted #ccc;
+  overflow:hidden;}
+.page .header1, .page .mobody{ 
+  padding:0 20px;}
+.page .mobody label{
+  font-size:18px; margin-top:20px;
+  font-weight:500;
+  line-height:80px;}
+.page .mobody input{
+  height:28px;}
+.page h3 em{font-size:12px; font-weight:500; font-style:normal}
+.page p{line-height:24px;}
+.page p label{font-size:14px; display:block;}
+.btn_nav{height:36px; line-height:36px;margin:14px 20px 0 20px;}
+.prev,.next{width:100px; height:32px; line-height:32px; repeat-x bottom; background-color:#ffffff; border:1px solid #d3d3d3; cursor:pointer}
+
+.container2{ width:100%;height:340px;}
+#choose2{float:right; padding:0 20px;}
+#choose2 a{color:#69C;}
+#myTab, #myTab2{ margin-top:10px; padding:0 10px;}
+.type-3{ width:25%;}
+.tab-pane{
+  width:100%; height:320px; 
+  -moz-box-shadow:1px 1px 2px #999 inset;              
+  -webkit-box-shadow:1px 1px 2px #999 inset;           
+  box-shadow:1px 1px 2px #999 inset;
+  overflow:hidden;
+  }
+.tab-pane ul, #guide-wrapper{
+  overflow-y:auto; overflow:-x:hidden;}
+#Img-text2 ul{
+  height:212px;}
+#pic2 ul, #guide-wrapper, #video2 ul{
+  height:280px;}
+.tab-text, .tab-event{ 
+  width:100%; height:100%}
+.tab-Img-text, .tab-pic{
+  width:100%; height:100%; 
+ }
+.tab-Img-text li, .tab-pic li{ cursor:pointer;}
+.tab-Img-text li, .tab-pic li, .tab-video li{
+  width:25%;padding:2px;
+  float:left;
+  border:1px solid #E5E5E5;
+  cursor:pointer;
+ }
+
+.tab-video video{
+  width:100%;
+  height:80px;
+  }
+.tab-video .video-title{ 
+  width:100%;height:24px; 
+  font-size:14px; text-align:center;
+  background-color:#333;
+  color:#FFF;
+  display:block;
+  line-height:24px;
+  text-indent:none}
+.tab-Img-text li img, .tab-pic li img{
+  width:100%; 
+  height:80px;
+ }
+.Img-title{
+  height:24px;width:100%;
+  background-color:#000;
+  font-size:14px Arial, Helvetica, sans-serif;color:#FFF;
+  line-height:24px;text-align:center;
+ }
+.tab-audio audio{
+  width:100%; height:80px;
+ 
+}
+.Group-Img-text{
+  clear:both;
+  padding-top:10px;
+  border-top:1px solid #CCC}
+.Group-Img-text img{ width:120px; height:80px; float:left; margin:4px 0; }
+/*.Group-Img-text ol{
+  width:100%;
+  padding-left:96px;
+  }*/
+.get-data{
+  box-sizing:border-box;
+  padding:10px 0;
+  border-bottom:1px solid #CCC;
+  width:100%;
+  overflow:hidden;
+  cursor:pointer;}
+.get-data img{float:left;padding:0 20px 0 20px; width:150px; height:120px;}
+.get-data ol,.get-data ol li{ border:none; }
+.get-data ol{
+  float:left; width:210px; }
+/*.get-data ol{ margin-left:120px;}*/
+.get-data ol li{padding:0;height:24px; width:100%; line-height:24px; padding-left:10px;}
+#Img-text input-group{ padding-top:20px; padding-left:20px; padding-bottom:10px; float:right; }
+/*分页*/
+.page-separate{width:100%;height:36px; background-color:#099}
+#follow h1, #disfollow h1{
+  text-align:center;
+  font-size:14px;
+  color:#999;
+  font-family:Arial, Helvetica, sans-serif;
+  margin-top:20%;}
+.event_result{
+  height:250px;
+  width:100%;
+  overflow:auto;
+}
+.event_result a{ 
+  float:left;
+  font-size:14px;
+  color:#666;
+  font-family:Arial, Helvetica, sans-serif;
+  line-height:36px;
+  text-indent:10px;}
+.event_result input[type="radio"]{
+  margin:12px 20px 0 10px;
+  float:right}
+.event_result li{
+  clear:both;
+  height:36px;
+  margin:0 40px; 
+  border-bottom:1px solid #999;}
+.event_result .result-1{
+  width:20%;}
+.event_result .result-2{
+  width:40%;}
+.event_result .result-3{
+  width:30%;}
+.event_result .result-4{
+  width:40%;}
+.event_result .result-5{
+  width:50%;}
+#skip_onto input{
+  width: 70%;
+  height:60px;
+  margin:20% 15% 0 15%;
+  text-align:center;
+  font-size:14px;
+  color:#999;
+  font-family:Arial, Helvetica, sans-serif;
+}

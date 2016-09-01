@@ -1,0 +1,82 @@
+@charset "UTF-8";
+.update {
+  height: auto;
+  margin: 10px;
+  align-items: center;
+  @extend .flex;
+  .update-users {//升级直销账户
+    width: 60px;
+    margin-right: 10px;
+    &>img {
+      display:block;
+      width: 100%;
+      max-width: 60px;
+    }
+  }
+  .update-user {//客服与帮助
+    width: 50px;
+    margin-right: 10px;
+    &>img {
+      display:block;
+      width: 100%;
+      max-width: 50px;
+    }
+  }
+  .update-iphone{
+    width: 60px;
+    text-align: right;
+    margin-right: 10px;
+    .iphone{
+      display: inline-block;
+      width: 18px;
+      vertical-align: middle;
+    }
+  }
+  .update-tip {
+    @include flex($val:1);
+    font-size: 14px;
+    color: $font-dark;
+    padding-right: 10px;
+  }
+}
+.service-help{//客服与帮助
+  margin: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+  background-color: #ff8078;
+  color: $color-white;
+  .update-tip{
+    color: $color-white;
+  }
+}
+.service-list{
+  li{
+    span{
+      &>img{
+        width: 20px;
+        height: 20px;
+        vertical-align: sub;
+      }
+    }
+  }
+}
+
+
+//在线客服
+.online{
+  display: inline-block;
+  position: relative;
+  .online-num{
+    display: inline-block;
+    position: absolute;
+    top:5px;
+    right: -22px;
+    font-size: 10px;
+    height: 14px;
+    padding: 0 4px;
+    line-height: 14px;
+    border: 1px solid $color-white;
+    color:$color-white;
+    @include roundBox($radius:50px);
+  }
+}

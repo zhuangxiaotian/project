@@ -1,0 +1,160 @@
+//@charset "UTF-8";
+////tab
+.tab{
+  position: fixed;
+  background-color: #e6e6e6;
+  top:45px;
+  border-top:10px solid #eeeeee;
+  &:after{
+    border-bottom: transparent;
+  }
+  .weui_navbar_item {
+    &.active{
+      color: #ffffff;
+      background-color: $color-blue;
+    }
+    &:after{
+      border-right: transparent;
+    }
+    &:active{
+    }
+  }
+}
+.tab+.weui_tab_bd{
+  padding-top: 91px;
+}
+
+.tab-fund {
+  @extend .flex;
+  align-items: center;
+  -webkit-align-items: center;
+  border-bottom: 1px solid $border-light;
+  &>div {
+    @include flex();
+    text-align: center;
+    padding: 5px 0;
+    &>a{
+      display: block;
+      padding: 5px 0;
+      border-right: 1px solid $border-light;
+      .icon-percent{
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        margin-top: -2px;
+        background: url(../images/icon_percent.png) no-repeat center;
+        vertical-align: middle;
+        -webkit-background-size: contain;
+        background-size: contain;
+      }
+    }
+    &:last-child{
+      &>a{border-right: transparent;}
+    }
+  }
+  &>div.active{
+    background-color: $color-yellow;
+    &>a,
+    &>a:target
+    {
+      color: #ffffff;
+      border: transparent;
+      .icon-percent{
+        background-image: url(../images/icon_percent_s.png);
+      }
+    }
+  }
+}
+.tab-chart {
+  @extend .flex;
+  align-items: center;
+  -webkit-align-items: center;
+  height: 40px;
+  padding:10px;
+  li {
+    @include flex();
+    text-align: center;
+    &>a {
+      display: inline-block;
+      min-width: 66px;
+      font-size: 14px;
+      padding: 5px 10px;
+      color: $font-light;
+      border: 1px solid $font-light;
+      -webkit-box-shadow:0 0 2px $font-light;
+      -moz-box-shadow:0 0 2px $font-light;
+      box-shadow:0 0 2px $font-light;
+      text-align: center;
+      @include roundBox($radius:16px);
+    }
+    &.active {
+      &>a {
+        color: $color-yellow;
+        border: 1px solid $color-yellow;
+        -webkit-box-shadow:0 0 2px $font-yellow;
+        -moz-box-shadow:0 0 2px $font-yellow;
+        box-shadow:0 0 2px $font-yellow;
+      }
+    }
+    &:nth-child(1){
+      text-align: left;
+    }
+    &:last-child{
+      text-align: right;
+    }
+  }
+}
+//
+//.tab3 {
+//  @extend .flex;
+//  width: 100%;
+//  height: 40px;
+//  line-height: 40px;
+//  background-color: $bg-base;
+//  border-bottom: 1px solid $border-base;
+//  li {
+//    @include flex();
+//    padding: 5px 0;
+//    text-align: center;
+//    vertical-align: middle;
+//    & > a {
+//      display: block;
+//      width: 100%;
+//      font-size: 14px;
+//      height: 30px;
+//      line-height: 30px;
+//      border-left: 1px solid $border-base;
+//    }
+//    &.cur {
+//      & > a {
+//        color: $color-red;
+//      }
+//    }
+//  }
+//}
+//
+//.tab-cont,
+//.tab2-cont {
+//  padding: 10px 0;
+//  position: relative;
+//  background-color: $color-white;
+//}
+//.tab-cont{
+//  padding: 0;
+//  position: relative;
+//  background-color:$bg-base;
+//}
+//.tab1-cont{
+//  padding: 10px 0;
+//  position: relative;
+//}
+//
+//.tab-assets {
+//  border-bottom: none;
+//}
+//
+////基金走势
+//.tab-trend {
+//  border-top: 1px solid $border-base;
+//  background-color: $color-white;
+//}

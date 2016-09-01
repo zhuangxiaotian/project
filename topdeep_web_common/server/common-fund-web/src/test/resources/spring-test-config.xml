@@ -1,0 +1,260 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	                    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	                    http://www.springframework.org/schema/tx
+	                    http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+	                    http://www.springframework.org/schema/jee
+	                    http://www.springframework.org/schema/jee/spring-jee-3.0.xsd
+	                    http://www.springframework.org/schema/context
+	                    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	                    http://www.springframework.org/schema/aop
+	                    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+
+	                    http://www.springframework.org/schema/util
+
+      					http://www.springframework.org/schema/util/spring-util-3.0.xsd"
+	default-lazy-init="false">
+
+	<description>import applicationContext file list</description>
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
+		<property name="ignoreResourceNotFound" value="false" />
+		<property name="locations">
+			<list>
+				<value>classpath:application.properties</value>
+			</list>
+		</property>
+	</bean>
+	<context:property-placeholder location="classpath:test.properties" />
+	<util:properties id="application" location="classpath:application.properties"></util:properties>
+	<util:properties id="test" location="classpath:test.properties"></util:properties>
+		<context:component-scan base-package="sinvo.fund" >
+		<context:exclude-filter type="assignable" expression="sinvo.fund.biz.common.CmsBiz"/>
+		<context:exclude-filter type="assignable" expression="sinvo.fund.dao.common.CmsDao"/>
+		<context:exclude-filter type="assignable" expression="sinvo.fund.biz.btb.impl.BtbBizBaseImpl"/>
+		<context:exclude-filter type="assignable" expression="sinvo.fund.dao.common.BtbDao"/>
+	</context:component-scan>
+
+	<bean id="applicationContext" class="sinvo.fund.util.ApplicationContextHelper"></bean>
+	<!--fund-db datasource start-->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName">
+			<value>${db.driverClassName}</value>
+		</property>
+		<property name="url">
+			<value>${db.connectionString}</value>
+		</property>
+		<property name="minIdle" value="1" />
+		<property name="maxActive" value="250" />
+		<property name="maxIdle" value="50" />
+	</bean>
+ 	
+	<bean id="vendorProperties"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="properties">
+			<props>
+				<prop key="SQL Server">sqlserver</prop>
+				<prop key="DB2">db2</prop>
+				<prop key="Oracle">oracle</prop>
+				<prop key="MySQL">mysql</prop>
+				<prop key="H2">h2</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="databaseIdProvider" class="org.apache.ibatis.mapping.VendorDatabaseIdProvider">
+		<property name="properties" ref="vendorProperties" />
+	</bean>
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="databaseIdProvider" ref="databaseIdProvider" />
+	</bean>
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="sinvo.fund.entity.base,sinvo.fund.entity.db" />
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
+	</bean>
+	<!--fund-db datasource end-->
+	<!--smssend-db datasource start -->
+	<bean id="dataSourceSmsdb" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName">
+			<value>${smsdb.driverClassName}</value>
+		</property>
+		<property name="url">
+			<value>${smsdb.connectionString}</value>
+		</property>
+		<property name="minIdle" value="1" />
+		<property name="maxActive" value="250" />
+		<property name="maxIdle" value="50" />
+	</bean>
+ 	
+	<bean id="vendorPropertiesSmsdb"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="properties">
+			<props>
+				<prop key="SQL Server">sqlserver</prop>
+				<prop key="DB2">db2</prop>
+				<prop key="Oracle">oracle</prop>
+				<prop key="MySQL">mysql</prop>
+				<prop key="H2">h2</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="databaseIdProviderSmsdb" class="org.apache.ibatis.mapping.VendorDatabaseIdProvider">
+		<property name="properties" ref="vendorPropertiesSmsdb" />
+	</bean>
+	<bean id="sqlSessionFactorySmsDb" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSourceSmsdb" />
+		<property name="databaseIdProvider" ref="databaseIdProviderSmsdb" />
+	</bean>
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="sinvo.fund.entity.smssendbase,sinvo.fund.entity.smssenddb" />
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactorySmsDb"></property>
+	</bean>
+	<bean id="smssendDao" class="sinvo.fund.dao.common.SmssendDao"></bean>
+	<bean id="smssendBiz" class="sinvo.fund.biz.common.SmssendBiz"></bean>
+	<!--smssend-db datasource end -->
+	<!--xw-db datasource start-->
+	<bean id="dataSourcexwdb" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName">
+			<value>${smsdb.driverClassName}</value>
+		</property>
+		<property name="url">
+			<value>${smsdb.connectionString}</value>
+		</property>
+		<property name="minIdle" value="1" />
+		<property name="maxActive" value="250" />
+		<property name="maxIdle" value="50" />
+	</bean>
+	
+	<bean id="vendorPropertiesxwdb"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="properties">
+			<props>
+				<prop key="SQL Server">sqlserver</prop>
+				<prop key="DB2">db2</prop>
+				<prop key="Oracle">oracle</prop>
+				<prop key="MySQL">mysql</prop>
+				<prop key="H2">h2</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="databaseIdProviderxwdb" class="org.apache.ibatis.mapping.VendorDatabaseIdProvider">
+		<property name="properties" ref="vendorPropertiesxwdb" />
+	</bean>
+	<bean id="sqlSessionFactoryxwdb" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSourcexwdb" />
+		<property name="databaseIdProvider" ref="databaseIdProviderxwdb" />
+	</bean>
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="sinvo.fund.entity.xwccdb" />
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactoryxwdb"></property>
+	</bean>
+	<bean id="xwccDao" class="sinvo.fund.dao.common.XwccDao"></bean>
+	<bean id="xwccBiz" class="sinvo.fund.biz.common.XwccBiz"></bean>
+	<!--xw-db datasource end-->
+
+	<bean id="mobileSession" class="sinvo.fund.mobile.entity.MobileSession"
+		scope="session">
+		<aop:scoped-proxy />
+    </bean>
+	
+	<bean class="org.springframework.beans.factory.config.CustomScopeConfigurer">
+        <property name="scopes">
+            <map>
+                <entry key="session">
+                    <bean class="org.springframework.web.context.request.SessionScope" />
+                </entry>
+                <entry key="request">
+                    <bean class="org.springframework.web.context.request.RequestScope" />
+                </entry>
+            </map>
+        </property>
+    </bean>
+    
+	<!-- TradeDao -->
+	<bean id="tradeDao" class="${tradeDao.implClassName}"></bean>
+    
+	<!-- 系统缓存 -->
+	<bean id="baseInfoCache" class="common.cache2.impl.JcsCache">
+		<constructor-arg value="baseinfo"></constructor-arg>
+	</bean>
+	<bean id="sessionCache" class="common.cache2.impl.JcsCache">
+		<constructor-arg value="session"></constructor-arg>
+	</bean>
+
+	<bean id="cache120" class="common.cache2.impl.JcsCache">
+		<constructor-arg value="cache120"></constructor-arg>
+	</bean>
+
+	<bean id="cache90" class="common.cache2.impl.JcsCache">
+		<constructor-arg value="cache90"></constructor-arg>
+	</bean>
+
+	<bean id="cache30" class="common.cache2.impl.JcsCache">
+		<constructor-arg value="cache30"></constructor-arg>
+	</bean>
+	<bean id="cache15" class="common.cache2.impl.JcsCache">
+		<constructor-arg value="cache15"></constructor-arg>
+	</bean>
+	<bean id="cache5" class="common.cache2.impl.JcsCache">
+		<constructor-arg value="cache5"></constructor-arg>
+	</bean>
+	<bean id="cache1" class="common.cache2.impl.JcsCache">
+		<constructor-arg value="cache1"></constructor-arg>
+	</bean>
+	
+	<bean id="cacheReq" class="common.cache2.impl.JcsCache">
+		<constructor-arg value="req"></constructor-arg>
+	</bean>
+
+	<!-- 基础类的实现 -->
+	<bean id="fundBizImplCommon" class="sinvo.fund.biz.gateway.impl.FundBizImplCommon"></bean>
+	<bean id="sessionManage" class="sinvo.fund.biz.gateway.impl.SessionManage"></bean>
+
+	<bean id="fundBiz_b00" class="sinvo.fund.biz.gateway.impl.FundBiz_b00_impl"></bean>
+	<bean id="fundBiz_n00" class="sinvo.fund.biz.gateway.impl.FundBiz_n00_impl"></bean>
+	<bean id="fundBiz_n0a" class="sinvo.fund.biz.gateway.impl.FundBiz_n0a_impl"></bean>
+	<bean id="fundBiz_u00" class="sinvo.fund.biz.gateway.impl.FundBiz_u00_impl"></bean>
+	<bean id="fundBiz_u0a" class="sinvo.fund.biz.gateway.impl.FundBiz_u0a_impl"></bean>
+	<bean id="fundBiz_u0k" class="sinvo.fund.biz.gateway.impl.FundBiz_u0k_impl"></bean>
+	
+	<bean id="fundBizParamCheckProxy" class="sinvo.fund.biz.gateway.impl.FundBizParamCheckProxy">
+	    <property name="b00_impl" ref="fundBiz_b00"></property>
+	    <property name="n00_impl" ref="fundBiz_n00"></property>
+	    <property name="n0a_impl" ref="fundBiz_n0a"></property>
+	    <property name="u00_impl" ref="fundBiz_u00"></property>
+	    <property name="u0a_impl" ref="fundBiz_u0a"></property>
+	    <property name="u0k_impl" ref="fundBiz_u0k"></property>
+	</bean>
+	
+	<bean id="fundBizLogProxy" class="sinvo.fund.biz.gateway.impl.FundBizLogProxy">
+	    <property name="b00_impl" ref="fundBizParamCheckProxy"></property>
+	    <property name="n00_impl" ref="fundBizParamCheckProxy"></property>
+	    <property name="n0a_impl" ref="fundBizParamCheckProxy"></property>
+	    <property name="u00_impl" ref="fundBizParamCheckProxy"></property>
+	    <property name="u0a_impl" ref="fundBizParamCheckProxy"></property>
+	    <property name="u0k_impl" ref="fundBizParamCheckProxy"></property>
+	</bean>
+	
+	<bean id="mobileFundBiz" class="sinvo.fund.mobile.biz.MobileFundBiz">
+	    <property name="b00_impl" ref="fundBizLogProxy"></property>
+	    <property name="n00_impl" ref="fundBizLogProxy"></property>
+	    <property name="n0a_impl" ref="fundBizLogProxy"></property>
+	    <property name="u00_impl" ref="fundBizLogProxy"></property>
+	    <property name="u0a_impl" ref="fundBizLogProxy"></property>
+	    <property name="u0k_impl" ref="fundBizLogProxy"></property>
+	</bean>
+	
+	<bean id="manageBizImpl" class="sinvo.fund.mobile.biz.manage.ManageBizImpl"></bean>
+	<bean id="manageBiz" class="sinvo.fund.biz.manage.impl.ManageBizParamCheckProxy">
+		<property name="biz_impl" ref="manageBizImpl"></property>
+	</bean>
+	
+	<bean id="manageClientDao" class="sinvo.fund.dao.manage.client.impl.ManageClientDao"></bean>
+	
+</beans>

@@ -1,0 +1,97 @@
+@charset "UTF-8";
+.voucher {
+  @extend .flex;
+  margin: 15px 10px;
+  .voucher-detail {
+    @include flex();
+    width: 100%;
+    position: relative;
+
+    &>img {
+      width: 100%;
+    }
+    .rmb {
+      display: block;
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      top: 50%;
+      margin-top: -30px;
+      left: 20px;
+      color: $color-white;
+    }
+    .cash-get {
+      display: block;
+      width: 60px;
+      height: 80px;
+      color: $color-white;
+      font-size: 3rem;
+      position: absolute;
+      top: 5%;
+      left: 8%;
+    }
+    .redpacket-get {
+      display: block;
+      width: 100px;
+      height: 60px;
+      line-height: 60px;
+      color: $color-white;
+      font-size: 1rem;
+      position: absolute;
+      top: 50%;
+      left: 6%;
+      margin-top: -35px;
+      text-align: center;
+      vertical-align: middle;
+      &>em {
+        font-size: 3rem;
+        margin-right: 5px;
+      }
+    }
+    .redpacket-date {
+      width: auto;
+      height: 50px;
+      line-height: 60px;
+      font-size: 14px;
+      position: absolute;
+      bottom: 12%;
+      right: 5%;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+}
+//选择赎回
+.redeem-select {
+  @include flex();
+  margin:0;
+  .redeem-icon {//银行logo
+    float: left;
+    margin-left: 10px;
+    line-height: 42px;
+  }
+  .redeem-title {
+    float: left;
+    margin-left: 10px;
+    .icon-cash{
+      margin-top: 6px;
+    }
+  }
+}
+.redeem-radio {
+  &>i {
+    margin-top: 15px;
+    margin-right: 10px;
+  }
+}
+.redeem-cash {
+  display: inline-block;
+  float: right;
+  margin-right: 10px;
+  &:last-child {
+    margin-right: 0;
+  }
+  &>div {
+    line-height: 25px;
+  }
+}

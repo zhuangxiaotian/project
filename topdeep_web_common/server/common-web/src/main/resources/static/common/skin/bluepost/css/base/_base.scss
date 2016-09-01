@@ -1,0 +1,75 @@
+html,body {
+  font-family:"Microsoft YaHei", "宋体", Verdana, Geneva, sans-serif;
+}
+body,p,a,ul,li,ol,h1,h2,h3,h4,h5,em,dd,dt,td,th,dl,input,button,span, select,i, strong{
+  margin:0;
+  padding:0;
+}
+ul,ol {
+  list-style: none;
+}
+dl dt {
+  font-weight: normal;
+}
+
+a {
+  cursor: pointer;
+}
+a:focus,
+a:hover{
+  text-decoration: none;
+}
+
+//border-sizing
+@mixin borderBox{
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+       -o-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+//border-radius
+@mixin roundBox($radius:4px) {
+  -webkit-border-radius:$radius;
+     -moz-border-radius:$radius;
+      -ms-border-radius:$radius;
+       -o-border-radius:$radius;
+          border-radius:$radius;
+}
+
+@mixin radiusClear {
+  -webkit-border-radius:0;
+     -moz-border-radius:0;
+      -ms-border-radius:0;
+       -o-border-radius:0;
+          border-radius:0;
+}
+
+//shadow
+@mixin boxShadow($shadow){
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+       -o-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
+
+.radiusClear {
+  -webkit-border-radius:0;
+  -moz-border-radius:0;
+  -ms-border-radius:0;
+  -o-border-radius:0;
+  border-radius:0;
+}
+.clearPadding {
+  padding: 0;
+}
+.addBorder {
+  border-left: 1px solid #dddddd;
+}
+//color
+$blue1:#0084ca;
+$blue2:#2896ca;
+
+$red1:#aaa;
+$red2:#fff;

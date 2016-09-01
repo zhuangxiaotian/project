@@ -1,0 +1,42 @@
+.footer-post {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-top: 30px;
+  text-align: center;
+  background-color: #f9f9f9;
+  .footer-content{
+    color: #666666;
+    p {
+      span {
+        display: inline-block;
+        padding: 5px 15px;
+        background-color: #f5f5f5;
+      }
+    }
+    &>ul{
+      display: inline-block;
+      overflow: hidden;
+      text-align: center;
+      &>li {
+        float: left;
+      }
+      li.post-hotline{
+        margin-left: 10px;
+        &>ul {
+          margin-top: 10px;
+          overflow: hidden;
+          &>li {
+            float: left;
+          }
+          .post-hotline-img{
+            margin-top: 6px;
+            margin-right: 10px;
+
+          }
+
+        }
+      }
+    }
+  }
+}

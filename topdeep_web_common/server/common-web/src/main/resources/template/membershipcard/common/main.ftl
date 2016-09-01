@@ -1,0 +1,1 @@
+<!DOCTYPE html><html lang="zh-CN"><head>	<#include "./head.ftl"></head><body>            <#if htmlbody??>			<@htmlbody></@htmlbody>			</#if>		    <!-- jQuery -->			<script src="${base}/static/js/vendors/jquery/jquery.min.js" type="text/javascript"></script>	<#if jsimport??>		<@jsimport></@jsimport>	</#if>	</body></html>

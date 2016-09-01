@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="IntegrationTest">
+	<test verbose="2" name="LocalIntegrationTest">
+		<classes>
+			<class name="post.fund.mobile.action.integration.PurchaseTest" />
+			<class name="post.fund.mobile.action.integration.RedeemTest"></class>
+			<class name="post.fund.mobile.action.integration.TodayTradeListTest"></class>
+			<class name="post.fund.mobile.action.integration.MyAssetsTest"></class>
+			<class name="post.fund.mobile.action.integration.ModifyTradePasswordTest"></class>
+		</classes>
+	</test> <!-- Default test -->
+</suite> <!-- Default suite -->

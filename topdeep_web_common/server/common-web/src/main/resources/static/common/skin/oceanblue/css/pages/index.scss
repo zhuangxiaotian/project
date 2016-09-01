@@ -1,0 +1,256 @@
+@charset "UTF-8";
+.notice {//公告
+  width:100%;
+  height: 30px;
+  line-height: 30px;
+  font-size:12px;
+  color:#4a4a4a;
+  background: #fdf9ba;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: relative;
+  .icon {
+    float:left;
+    background: url(../images/hint-icon.png) center center no-repeat;
+    background-size: 16px 16px;
+    display: inline-block;
+    height: 30px;
+    vertical-align: middle;
+    width:30px;
+  }
+}
+#slides{
+  width:100%;
+  height:50px;
+  .slidesjs-control{
+    img{
+      height:100%;
+    }
+  }
+  .slidesjs-pagination{
+    display:none;
+  }
+}
+
+//banner
+.banner{margin-top: 45px;}
+.slideBox {
+  position: relative;
+  overflow: hidden;
+  .hd {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    text-align: center;
+    ul {
+      display: inline-block;
+    }
+    li {
+      float: left;
+      /* display:inline-block;*/
+      width: 6px;
+      height: 6px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      background: transparent;
+      text-indent: -9999px;
+      overflow: hidden;
+      margin: 0 6px;
+      &.on {
+        background: transparent;
+      ;
+      }
+    }
+  }
+  .bd {
+    position: relative;
+    z-index: 0;
+    li {
+      position: relative;
+      text-align: center;
+      img {
+        vertical-align: top;
+        width: 100%;
+      }
+      a {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+    }
+  }
+}
+//推荐基金
+.fund-pro{
+  background-color: #ffffff;
+  margin-bottom: 5px;
+  padding: 10px 0;
+  .fund-name{
+    font-size: 1.8rem;
+    color: #000000;
+    padding:0 10px;
+    text-align: left;
+    overflow: hidden;
+    .title{display:inline-block;float: left;}
+    .detail{
+      display: inline-block;
+      float: right;
+      font-size: 1.4rem;
+      color: $color-blue;
+      padding: 4px 0 0 20px;
+    }
+  }
+  .seven-day{//七日年化
+    color: #909090;
+    text-align: center;
+  }
+  .fund-data{
+    display: block;
+    color: $color-red;
+    text-align: center;
+    position: relative;
+    &>em{
+      font-size: 3.6rem;
+    }
+    .icon-right{
+      position: absolute;
+      top: 20px;
+      right: 10px;
+    }
+  }
+  .fund-datas{
+    @include boxSizing($val:border-box);
+    @extend .flex;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top:1px solid rgba(0,0,0,0.1);
+    .flex-cell{
+      border-right: 1px solid rgba(0,0,0,0.1);
+      .data-title{
+        font-size: 1.4rem;
+        color: #909090;
+      }
+      .data{
+        font-size: 2.4rem;
+        padding-top: 10px;
+      }
+    }
+
+  }
+  .fund-btn{
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+    padding-top: 5px;
+    &>.btn{
+      height: 30px;
+      line-height: 30px;
+    }
+  }
+}
+.fund-tag {
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  &>span{
+    display: inline-block;
+    padding: 2px 8px;
+    color: #565656;
+    &>i{
+      margin-right: 3px;
+      margin-bottom: 2px;
+    }
+  }
+}
+//占位
+.place-index{
+  height: 56px;
+  line-height: 56px;
+}
+//navbar
+.navbar {
+  background: #fff;
+  border-top: 1px solid #dbdbdb;
+  bottom: 0;
+  height: 51px;
+  left: 0;
+  line-height: 51px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  .navbar-nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    padding-left: 0;
+    margin: 0;
+    li {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      float: none;
+      a {
+        color: #000;
+        display: inline-block;
+        width: 100%;
+        height: 51px;
+        line-height: 20px;
+        .navbar-label {
+          padding-top: 2px;
+          line-height: 1;
+          font-size: 12px;
+          display: block;
+          word-wrap: normal;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+      }
+      a [class*=icon] {
+        background: url(../images/navbar-icon.png) 0 0 no-repeat;
+        background-size: auto 48px;
+        width: 24px;
+        height: 24px;
+        margin: 6px auto 0;
+        display: block;
+        line-height: 24px;
+        &::before {
+          font-size: 22px;
+          vertical-align: middle;
+        }
+      }
+      a [class=icon-fund] {
+        background-position: -24px 0;
+      }
+      a [class=icon-high] {
+        background-position: -48px 0;
+      }
+      a [class=icon-more] {
+        background-position: -72px 0;
+      }
+    }
+    li.active{
+      a .icon-home {
+        background-position: 0 -24px;
+      }
+      a .icon-fund {
+        background-position: -24px -24px;
+      }
+      a .icon-high {
+        background-position: -48px -24px;
+      }
+      a .icon-more {
+        background-position: -72px -24px;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <configSections>
+        <section name="OrMappingConfig" type="ORMapping.Builder.ORMappingConfigSection, ORMapping.Builder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    </configSections>
+    <OrMappingConfig dbmapNamespace="topdeep.commonfund.entity.db"
+        dbSchemaStartWith="T_" dbSchemaSep="_" targetLanguage="java"
+        database="MSSQL" dbMapSavePath="z:\Project\topdeep\topdeep_web_common\server\common-core\src\main\java"
+        dbTypeClass="可空使用SqlTypes" buildFile="true" buildAssembly="false"
+        buildBusinesslogic="true" buildCacheLogic="true" buildFKdelete="true"
+        buildLogInterface="true" buildProcedure="false" buildStringEqualCondition="true"
+        buildCustomSqlQuery="true" buildMultiFieldOrderQuery="true"
+        buildFKSelect="true" buildFKDeleteCheck="true" buildEntityQueryIsPrivate="true"
+        buildBusinessEntityQuery="true" buildEntityInsertUseRef="false"
+        buildSchemaUseDb="false" buildSchemaUseSchemaFile="true" databaseIsMysql="false"
+        schemaFileName="Z:\project\topdeep\topdeep_web_common\doc\db\common-fund-db.config"
+        dbConnectionString="" aspxHideClassReplace="Financing.Template"
+        aspxBaseClassName="Financing.Template" aspxNameSpace="Financing"
+        aspxTemplateFile="D:\Project\Office\czbank\trunk\financing\Financing\Template.aspx"
+        aspxSavePath="D:\Project\Office\czbank\trunk\financing\Financing"
+        styleName="button2" aspxImportNameSpaces="" aspxBuildTables=""
+        buildTables="" entityBaseType="" queryBaseType="" targetFramework="MyBatis" />
+</configuration>

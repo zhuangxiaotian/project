@@ -1,0 +1,229 @@
+@charset "UTF-8";
+//开户
+.open-step{
+  width: 100%;
+  &>ul {
+    max-width: 630px;
+    margin: 0 auto;
+    &>li{
+      //overflow: hidden;
+      margin-bottom: 15px;
+      position: relative;
+      &>span {
+        display: inline-block;
+        width: 120px;
+        position: absolute;
+        text-align: center;
+        font-size: 16px;
+        z-index: 9;
+      }
+      span.step1{
+        bottom: -10px;
+      }
+      span.step2{
+        bottom: -10px;
+        left: 245px;
+      }
+      span.step3{
+        bottom: -10px;
+        right: 10px;
+      }
+      span.step-on {
+        color: #347ab8;
+      }
+    }
+  }
+}
+
+.sub-step {
+  width: 100%;
+  text-align: center;
+  &>ul {
+    margin-left: 10%;
+    &>li{
+      width: 600px;
+      overflow: hidden;
+      margin-bottom: 15px;
+      &>span {
+        display: inline-block;
+        width: 150px;
+        float: left;
+      }
+      span.step1{
+        margin-left: 50px;
+        color: #ff9333;
+      }
+      span.step2{
+        margin-left: 25px;
+      }
+      span.step3{
+        margin-left: 25px;
+      }
+    }
+  }
+}
+
+
+.sub-step-content {
+  margin-left: 10%;
+  &>dt {
+    font-size: 16px;
+    padding: 20px;
+    color: #ff3333;
+    &>em {
+      font-style: normal;
+    }
+  }
+  &>dd{
+    font-size: 16px;
+    padding: 20px;
+    color: #333333;
+    &>em {
+      font-style: normal;
+    }
+    &>span{
+      font-size: 16px;
+      color: #333333;
+    }
+  }
+}
+.sub-next-step
+{
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  padding-left: 0;
+}
+.sub-next-step1{
+  text-align: left;
+}
+
+//第二步
+.second-step {
+  .sub-step{
+    span.step2 {
+      color: #ff9333;
+    }
+  }
+}
+//第三步
+.third-step {
+  .sub-step{
+    span.step2,
+    span.step3 {
+      color: #ff9333;
+    }
+  }
+}
+
+//交易金额
+.fund-cost {
+  color: #ff3333;
+}
+
+.step-over {
+  width: 100%;
+  &>dl{
+    width: 600px;
+    margin: 0 auto;
+    padding: 15px 0;
+    &>dt{
+      padding: 20px 0;
+      text-align: center;
+    }
+    &>dd{
+      font-size:18px;
+      color: #666666;
+      &>ul{
+        padding-left: 35%;
+        &>li{
+          span{
+            font-size: 20px;
+            color: #333333;
+          }
+          em{
+            color: #ff3333;
+            font-style: normal;
+          }
+          a{
+            text-decoration: underline;
+            color: #ff3333;
+            font-size: 14px;
+          }
+          span.fail-reason {
+            color: #ff3333;
+            font-size: 14px;
+          }
+        }
+        &>li.dividend {
+          span {
+            font-size: 14px;
+            color: #666666;
+            margin-right: 10px;
+          }
+          span.dividend-success{
+            color: #347ab8;
+          }
+          span.dividend-fail{
+            color: #ff3333;
+          }
+        }
+      }
+      //购买
+      .buy-success,
+      .buy-fail
+      {
+        padding-left: 20%;
+      }
+      //赎回
+      .redeem-success,
+      .redeem-fail
+      {
+        padding-left: 22%;
+      }
+    }
+  }
+}
+
+//success
+.sub-success {
+  width: 100%;
+  text-align: center;
+  padding: 8% 0;
+  &>dl{
+    padding: 15px;
+    &>dt{
+      padding: 20px 0;
+    }
+    &>dd{
+      font-size:18px;
+      color: #666666;
+      span{
+        font-size: 20px;
+        color: #333333;
+        padding: 0 5px;
+      }
+      em{
+        color: #ff3333;
+        font-style: normal;
+      }
+      a{
+        text-decoration: underline;
+        color: #ff3333;
+        font-size: 14px;
+        margin-left: -210px;
+      }
+      span.redeem-fail {
+        color: #ff3333;
+        font-size: 14px;
+        margin-left: -333px;
+      }
+      span.redeem-reason {
+        color: #ff3333;
+        font-size: 14px;
+        margin-left: -280px;
+      }
+    }
+  }
+}
+

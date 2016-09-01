@@ -1,0 +1,108 @@
+@charset "UTF-8";
+//取现
+.cash-bank{
+  @extend .flex;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.sub-step{
+  @extend .flex;
+  padding-top: 10px;
+}
+.step-pic{
+  width:40px;
+  margin-right: 20px;
+  &>img{
+    width: 100%;
+  }
+}
+.step{
+  @include flex();
+  .step1{
+    em{color: $color-black;}
+  }
+  .step2{
+    padding-top: 26px;
+  }
+  .step3{
+    padding-top: 28px;
+  }
+  .over{
+    color: $font-light;
+  }
+}
+//货币基金
+.bg-fund{
+  width: 100%;
+  height: auto;
+  background: url("../images/bg_fund.png") no-repeat center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  position: relative;
+}
+.fund-title{
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+}
+.fund-num{
+  @extend .fund-title;
+}
+.foot-fund{
+  width:100%;
+  padding-top: 40px;
+  position:fixed;
+  bottom:0;
+  background-color: rgba(238,238,238,0.6);
+  .sub-cell{padding-top:5px;background-color: rgba(238,238,238,0.9)}
+}
+.arrow-down{//下箭头
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top:0;
+  animation:updown 1s infinite;
+  -webkit-animation:updown 1s infinite;
+  a{
+    display: inline-block;
+    padding: 5px 10px;
+    &>img{
+      width: 20px;
+      margin: 0 auto;
+    }
+  }
+}
+@keyframes updown
+{
+  0%   {top:10px;}
+  50%  {top:0;}
+  100% {top:10px;}
+}
+
+@-webkit-keyframes updown /*Safari and Chrome*/
+{
+  0%   {top:10px;}
+  50%  {top:0;}
+  100% {top:10px;}
+}
+//每日收益
+.daily-title{
+  width: 100%;
+  height: auto;
+  background-color: $color-gray;
+  position: fixed;
+  top: 45px;
+  z-index: 9;
+  table{
+    padding:0 10px;
+  }
+}
+.daily-value{
+  padding-top: 86px;
+  table{
+    color: $font-light;
+  }
+}
+.table-daily{
+  color: $font-light;
+}

@@ -1,0 +1,55 @@
+.slick-cell {
+      background: white !important;
+      border-color: transparent !important;
+      line-height: 19px !important;
+    }
+      /* alternating offsets */
+    .slick-row .cell-inner {
+      margin-right: 60px;
+    }
+    .slick-row[row$="1"] .cell-inner, .slick-row[row$="3"] .cell-inner, .slick-row[row$="5"] .cell-inner,
+    .slick-row[row$="7"] .cell-inner, .slick-row[row$="9"] .cell-inner {
+      margin-left: 60px;
+      margin-right: 0;
+    }
+    .contact-card-cell {
+      border-color: transparent !important;
+    }
+    .cell-inner {
+      height: 81px;
+      margin: 3px;
+      padding: 10px;
+      background: #fafafa;
+      border: 1px solid #DDD;
+      border-radius:10px;
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+    }
+    .template_ul li{overflow:hidden;padding:14px 10px; margin:10px 10px;}
+    dl, dt{ margin:0; padding:0;}
+	.li-head{ float:left; margin:0 20px;}
+	.li-head img{width:120px;height:120px;}
+	.li-info a{line-height:24px;}
+	.li-info{ float:left;margin:auto 20px;}
+    .cell-inner:hover {
+      background: #f0f0f0;
+    }
+    .cell-left {
+      width: 90px;
+      border-radius:4px;
+      -webkit-border-radius:4px;
+      height: 100%;
+      float: left;
+    }
+    .cell-main {
+      margin-left: 114px;
+      text-indent:0px;
+    }
+    .cell-main, .cell-main b, .cell-main span{
+      font-size:12px;
+      font-family:'Microsoft YaHei','Hiragino Sans GB',Helvetica,Arial,'Lucida Grande',sans-serif;}
+    .cell-main span{
+      display:inline-block;}
+    .b_padding{
+      padding:0 8px;}
+    .b_type{}

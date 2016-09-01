@@ -1,0 +1,63 @@
+@charset "UTF-8";
+//alert
+.dialog-alert{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  left: 0;
+  top: 0;
+  z-index:999;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-box-align: center;
+  box-align: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-box-pack: center;
+  box-pack: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -o-box;
+  display: -ms-box;
+  display: box;
+  .alert-content {
+    display: block;
+    width: 80%;
+    font-size: 1em;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.9);
+    padding: 0;
+    z-index:999;
+    h3 {
+      line-height: 3em;
+      font-size: 1.6rem;
+      font-weight: 200;
+      color: #000;
+      margin-top:0;
+      margin-bottom: 0;
+      border-radius: 8px 8px 0 0;
+      text-align: center;
+    }
+    p {
+      line-height: 1.5em;
+      font-size: 1.4rem;
+      color: #333;
+      text-align: center;
+      margin:0;
+      padding: 0 10px;
+      max-height: 140px;
+      overflow: auto;
+    }
+    .alertBtn{
+      margin-top: 10px;
+      border-top: 1px solid #ddd;
+      line-height: 4rem;
+      font-size: 1.6rem;
+      color:$color-blue;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,394 @@
+@charset "UTF-8";
+.fund-table {
+  width: 100%;
+  height: auto;
+  border-collapse: collapse;
+  font-size: 14px;
+  position: relative;
+  tr {
+    th,
+    td
+    {
+      padding: 10px 0 10px 5px;
+      text-align: center;
+      vertical-align: middle;
+      //&:last-child {
+      //  padding: 10px 5px 10px 0;
+      //}
+      .table-title-s {
+        font-size: 12px;
+        color: #666666;
+      }
+
+      .trend {
+        font-size: 16px;
+      }
+      .sub-check{
+        margin: 5px;
+      }
+    }
+    .btn-buy{//购买
+      width: 70px;
+      margin: 0 auto;
+    }
+    .fund-group{//详情
+      @extend .flex;
+      align-items: center;
+      -webkit-align-items: center;
+      i{
+        margin-right: 5px;
+      }
+      .group-icon{
+        @include flex($val:2);
+      }
+      .group-name{
+        @include flex($val:18);
+        text-align: left;
+      }
+    }
+    .fund-equity {//净值
+      font-size: 30px;
+      font-weight: 500;
+      vertical-align: top;
+    }
+    .fund-equity1 {//净值
+      font-size: 22px;
+      padding-top: 10px;
+    }
+    .fund-trend {//走势
+      font-size: 30px;
+      font-weight: 500;
+    }
+    th.text-l,
+    td.text-l
+    {
+      text-align: left;
+      padding-left: 10px;
+    }
+    th.text-r,
+    td.text-r{
+      text-align: right;
+      padding-right: 10px;
+    }
+    .text-l-20{
+      text-align: left;
+      padding-left: 30px;
+    }
+    td.w1{
+      width: 35%;
+    }
+    td.w2{
+      width: 30%;
+    }
+
+  }
+  .table-border {//选择定投基金
+    border-bottom: 1px solid $border-light;
+    &>th{
+      padding: 10px 0;
+      &>div{
+        border-right: 1px solid $border-gray;
+      }
+    }
+  }
+  .table-select{//被选中状态下
+    &>td,
+    &>th
+    {
+      background-color: $bg-pink;
+    }
+  }
+  .table-cash{//现金宝详情
+    &>td,
+    &>th
+    {
+      background-color: $bg-light;
+    }
+  }
+  .gain-loss{//盈亏查询
+    &>td,
+    &>th
+    {
+      background-color: $bg-pink1;
+    }
+  }
+  thead,
+  tfoot
+  {
+    tr {
+      th,
+      td
+      {
+        color: $font-light1;
+        i {
+          margin-top: -3px;
+          margin-left: 3px;
+        }
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        background-color: $color-white;
+        font-size: 14px;
+      }
+    }
+    .fund-detail {
+      td{
+        font-size: 18px;
+      }
+    }
+    .fund-title {
+      &>td {
+        color: $font-light1;
+      }
+    }
+  }
+  .line {
+    position: absolute;
+    display: inline-block;
+    width: 1px;
+    height: 50px;
+    top:50%;
+    left: 50%;
+    margin-top: -18px;
+    border-right: 1px solid rgba(255,255,255,0.6);
+  }
+}
+//
+.trend-table {
+  tbody {
+    tr {
+      td {
+        width: 50%;
+        color: #ffffff;
+        background-color:$color-red;
+        .bank-tip {
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
+.fund-table-l {
+  @extend .fund-table;
+  tr {
+    th,
+    td
+    {
+      text-align: left;
+      padding: 10px;
+      &>a {
+        display: inline-block;
+      }
+    }
+    .fund-manage{
+      color: $color-red;
+      white-space: nowrap;
+    }
+  }
+  thead {
+    tr {
+      th {
+        color: $color-black;
+      }
+    }
+  }
+}
+
+//基金详情
+.fundlist-table {
+  height: auto;
+  background-color: #e54e48;
+  -webkit-background-size:cover;
+  background-size:cover;
+  tr{
+    @extend .flex;
+    td,
+    th
+    {
+      @include flex();
+    }
+  }
+  tbody {
+    tr {
+      td{
+        color: $color-white;
+        background-color: transparent;
+        .border-right{
+          width: 100%;
+        }
+      }
+      .equity-detail {
+        font-size: 18px;
+        &>i {
+          margin-bottom: 3px;
+        }
+      }
+      .assets-tip { //我的资产
+        text-align: left;
+        font-style: italic;
+        padding:10px 0;
+        &>div{
+          border-bottom: 1px dashed $border-base;
+          em {
+            font-style: italic;
+          }
+        }
+      }
+      .assets-tip1 { //0531修改我的资产
+        text-align: left;
+        font-style: italic;
+        padding:10px 0 5px;
+        font-size:12px;
+        &>div{
+          em {
+            font-style: italic;
+          }
+        }
+        .assets-tip2 {
+          text-align: right;
+          font-size:12px;
+          color: #dbdbdb;
+          font-style: normal;
+        }
+      }
+
+    }
+  }
+}
+.equity-table {//净值
+  tr{
+    @extend .flex;
+    align-items: center;
+    -webkit-align-items: center;
+    td,
+    th
+    {
+      @include flex();
+    }
+  }
+  thead {
+    tr.thead-border {
+      &>th{
+        font-size: 12px;
+        background-color: $bg-base;
+        &:first-child {
+          border-left: 0;
+        }
+        &>div{
+          border-right:1px solid $color-white;
+        }
+      }
+    }
+  }
+  tbody {
+    tr{
+      border-top: 1px solid $border-base;
+      td{
+        font-size: 12px;
+        color: $font-light1;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+//定投明细
+.investment-table{
+  tr {
+    th,
+    td {
+      padding: 5px;
+      text-align: center;
+      vertical-align: middle;
+      color: $font-dark;
+      &:last-child {
+        padding: 0;
+      }
+    }
+  }
+  thead,
+  tfoot
+  {
+    tr {
+      th,
+      td {
+        color: $font-dark;
+      }
+    }
+  }
+}
+.equity-tip {
+  font-size: 12px;
+  color: $color-white;
+}
+
+//历史分红
+.table-bordered {
+  thead,
+  tbody{
+    tr{
+      width: 100%;
+      border-top: 1px solid $border-gray;
+      &:last-child{
+        border-bottom: 1px solid $border-gray;
+      }
+      td,
+      th
+      {
+        width: 50%;
+        border-right: 1px solid $border-gray;
+        &:first-child{
+          border-left: 1px solid $border-gray;
+        }
+      }
+    }
+    tr.border-none{
+      border-bottom: none;
+    }
+  }
+  thead {
+    tr{
+      th{
+        font-size: 12px;
+        background-color: #f0f0f0;
+        .sub-select2{
+          .select-list{
+            top: 36px;
+            left: -4px;
+          }
+        }
+      }
+    }
+  }
+}
+//基金理财
+.table-fundall{
+  tr{
+    td,
+    th{
+      &:nth-child(1){
+        width: 36%;
+      }
+      &:nth-child(2){
+        width: 28%;
+      }
+      &:nth-child(3){
+        width: 36%;
+      }
+    }
+  }
+}
+@media screen and (max-width:330px) {
+  .table-fundall{
+    tr{
+      td,
+      th{
+        font-size: 13px!important;
+      }
+    }
+  }
+}

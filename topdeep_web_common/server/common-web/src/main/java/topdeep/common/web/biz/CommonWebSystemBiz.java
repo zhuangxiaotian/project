@@ -1,0 +1,1 @@
+package topdeep.common.web.biz;import org.springframework.stereotype.Service;import topdeep.common.biz.common.impl.CommonSystemBiz;@Service("commonWebSystemBiz")public class CommonWebSystemBiz extends CommonSystemBiz {	}

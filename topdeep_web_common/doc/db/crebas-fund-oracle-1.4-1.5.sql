@@ -1,0 +1,83 @@
+DROP TABLE T_FUND_BANK_CARD_BIN CASCADE CONSTRAINTS;
+
+/*==============================================================*/
+/* Table: T_FUND_BANK_CARD_BIN                                  */
+/*==============================================================*/
+CREATE TABLE T_FUND_BANK_CARD_BIN  (
+   ID                   CHAR(24)                        NOT NULL,
+   BANK_NO              VARCHAR2(50)                    NOT NULL,
+   BANK_NAME            VARCHAR2(200)                   NOT NULL,
+   BANK_CARD_LENGTH     VARCHAR2(50),
+   BANK_CARD_BIN        VARCHAR2(100)                   NOT NULL,
+   ROW_VERSION          NUMBER(8,0)                     NOT NULL,
+   CREATE_TIME          DATE                            NOT NULL,
+   CREATE_ID            CHAR(24),
+   CREATE_NAME          VARCHAR2(100),
+   MODIFY_TIME          DATE                            NOT NULL,
+   MODIFY_ID            CHAR(24),
+   MODIFY_NAME          VARCHAR2(100),
+   AUDIT_ID             CHAR(24),
+   AUDIT_TIME           DATE                            NOT NULL,
+   AUDIT_NAME           VARCHAR2(100),
+   AUDIT_STATE          CHAR(1),
+   DELETED              CHAR(1)                         NOT NULL,
+   CONSTRAINT PK_T_FUND_BANK_CARD_BIN PRIMARY KEY (ID)
+);
+
+COMMENT ON TABLE T_FUND_BANK_CARD_BIN IS
+'银行卡bin表';
+
+COMMENT ON COLUMN T_FUND_BANK_CARD_BIN.ID IS
+'银行卡BinID';
+
+COMMENT ON COLUMN T_FUND_BANK_CARD_BIN.BANK_NO IS
+'银行代码';
+
+COMMENT ON COLUMN T_FUND_BANK_CARD_BIN.BANK_NAME IS
+'银行名称';
+
+COMMENT ON COLUMN T_FUND_BANK_CARD_BIN.BANK_CARD_LENGTH IS
+'银行卡长度';
+
+COMMENT ON COLUMN T_FUND_BANK_CARD_BIN.BANK_CARD_BIN IS
+'银行卡Bin';
+
+COMMENT ON COLUMN T_FUND_BANK_CARD_BIN.ROW_VERSION IS
+'版本号';
+
+COMMENT ON COLUMN T_FUND_BANK_CARD_BIN.CREATE_TIME IS
+'创建时间';
+
+COMMENT ON COLUMN T_FUND_BANK_CARD_BIN.CREATE_ID IS
+'创建ID';
+
+COMMENT ON COLUMN T_FUND_BANK_CARD_BIN.CREATE_NAME IS
+'创建人';
+
+COMMENT ON COLUMN T_FUND_BANK_CARD_BIN.MODIFY_TIME IS
+'修改时间';
+
+COMMENT ON COLUMN T_FUND_BANK_CARD_BIN.MODIFY_ID IS
+'修改人ID';
+
+COMMENT ON COLUMN T_FUND_BANK_CARD_BIN.MODIFY_NAME IS
+'修改人';
+
+COMMENT ON COLUMN T_FUND_BANK_CARD_BIN.AUDIT_ID IS
+'审核ID';
+
+COMMENT ON COLUMN T_FUND_BANK_CARD_BIN.AUDIT_TIME IS
+'审核时间';
+
+COMMENT ON COLUMN T_FUND_BANK_CARD_BIN.AUDIT_NAME IS
+'审核人';
+
+COMMENT ON COLUMN T_FUND_BANK_CARD_BIN.AUDIT_STATE IS
+'审核状态 0 未审核   1审核通过';
+
+COMMENT ON COLUMN T_FUND_BANK_CARD_BIN.DELETED IS
+'是否删除 0 未删除  1删除';
+
+update T_SYSTEM_CONFIG set SYSTEM_PARAM_VALUE = '1.5', MODIFY_TIME = sysdate where SYSTEM_PARAM_CATEGORY = 'topdeep.commonfund.entity.params.CommonFundDbParam' and SYSTEM_PARAM_CODE = 'dbVersion';
+
+commit;

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure.dtd">
+
+<!-- =============================================================== -->
+<!-- Configure the Jetty Server -->
+<!-- -->
+<!-- Documentation of this file format can be found at: -->
+<!-- http://wiki.eclipse.org/Jetty/Reference/jetty.xml_syntax -->
+<!-- -->
+<!-- Additional configuration files are available in $JETTY_HOME/etc -->
+<!-- and can be mixed in. For example: -->
+<!-- java -jar start.jar etc/jetty-ssl.xml -->
+<!-- -->
+<!-- See start.ini file for the default configuraton files -->
+<!-- =============================================================== -->
+
+
+<Configure id="Server" class="org.eclipse.jetty.server.Server">
+	<New id="jdbc-sinvo-fund" class="org.eclipse.jetty.plus.jndi.Resource">
+		<Arg></Arg>
+		<Arg>jdbc-sinvo-fund</Arg>
+		<Arg>
+			<New class="org.apache.commons.dbcp.BasicDataSource">
+				<Set name="driverClassName">oracle.jdbc.driver.OracleDriver</Set>
+				<Set name="url">jdbc:oracle:thin:vofund/vofund@oracledb.todpeep.cn:1521:xe</Set>
+				<Set name="username"></Set>
+				<Set name="password"></Set>
+				<Set name="validationQuery">SELECT 1 FROM DUAL</Set>
+			</New>
+		</Arg>
+	</New>
+	<New id="jdbc-sinvo-smssend" class="org.eclipse.jetty.plus.jndi.Resource">
+		<Arg></Arg>
+		<Arg>jdbc-sinvo-fund</Arg>
+		<Arg>
+			<New class="org.apache.commons.dbcp.BasicDataSource">
+				<Set name="driverClassName">oracle.jdbc.driver.OracleDriver</Set>
+				<Set name="url">jdbc:oracle:thin:vofund/vofund@oracledb.todpeep.cn:1521:xe</Set>
+				<Set name="username"></Set>
+				<Set name="password"></Set>
+				<Set name="validationQuery">SELECT 1 FROM DUAL</Set>
+			</New>
+		</Arg>
+	</New>
+</Configure>

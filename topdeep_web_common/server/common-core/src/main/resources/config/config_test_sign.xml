@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?><Finance>
+<Message id="">
+<Configs id="Configs">
+<item name="item1">1</item>
+<item name="item2">2</item>
+<item name="item3">3</item>
+<item name="item4">4</item>
+</Configs>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+<ds:SignedInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" xmlns:ds="http://www.w3.org/2000/09/xmldsig#"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" xmlns:ds="http://www.w3.org/2000/09/xmldsig#"/>
+<ds:Reference URI="#Configs" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+<ds:Transforms xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" xmlns:ds="http://www.w3.org/2000/09/xmldsig#"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" xmlns:ds="http://www.w3.org/2000/09/xmldsig#"/>
+<ds:DigestValue xmlns:ds="http://www.w3.org/2000/09/xmldsig#">g5+qFHY/WPZzPm0xb6XYpyAcuxg=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+czkLPdS96N6L1+C0E8Z5X941dS5Aap7CwDAMb8HccmUDPZCUhLJcmZKR8Yt0l0Cx49LKbcjGFIcs
+8SLOxc9vHmzy67l/XkHwrpfh/SzbJYJjVHiaOm6x04CMvOGj6Wgeueq7TGuGYrhPKl5BhMmL4rAV
+gjWiteBbL3wrZVI/3dZ0KiwqFba6txuUCLgTnRpg7lPFjGCCpcYtFJz0+H4LXSYpygDUMeDOd1DB
+DSLVTsh5k1hLgUXlpPZq8qVLqT4C2Rx9XPUPCM0d0QGtxlzWMIrPOuxyKli5df8Cj2Bcj07Q1CiA
+LbqY+DnfMKfqpxWV+fTFa9GxHdGrymkGb1RNpg==
+</ds:SignatureValue>
+</ds:Signature>
+</Message>
+</Finance>

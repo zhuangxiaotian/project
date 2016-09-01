@@ -1,0 +1,610 @@
+@charset "UTF-8";
+//single
+[class^=icon-] {
+  display: inline-block;
+  background: no-repeat center;
+  vertical-align: middle;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+.icon-more {
+  background-image: url(../images/icon_more.png);
+  width: 25px;
+  height: 25px;
+}
+.icon-setting{
+  background-image: url(../images/icon_setting.png);
+  width: 25px;
+  height: 25px;
+}
+.icon-photo {
+  background-image: url(../images/icon_photo.png);
+  width: 75px;
+  height: 75px;
+}
+
+.icon-right {
+  background-image: url(../images/icon_right_red.png);
+  width: 9px;
+  height: 15px;
+}
+.icon-phone {
+  background-image: url(../images/icon_phone.png);
+  width: 20px;
+  height: 20px;
+}
+.icon-phone1 {
+  background-image: url(../images/icon_phone1.png);
+  width: 20px;
+  height: 20px;
+}
+.icon-user{
+  background-image: url(../images/icon_user.png);
+  width: 20px;
+  height: 20px;
+}
+.icon-gesture {
+  background-image: url(../images/icon_gesture.png);
+  width: 20px;
+  height: 20px;
+}
+.icon-gesture1 {
+  background-image: url(../images/icon_gesture1.png);
+  width: 20px;
+  height: 20px;
+}
+.icon-password {
+  background-image: url(../images/icon_password.png);
+  width: 20px;
+  height: 20px;
+}
+.icon-bill {
+  background-image: url(../images/icon_bill.png);
+  width: 20px;
+  height: 20px;
+}
+.icon-risk {
+  background-image: url(../images/icon_risk.png);
+  width: 20px;
+  height: 20px;
+}
+.icon-on {
+  background-image: url(../images/icon_on.png);
+  width: 50px;
+  height: 25px;
+}
+.icon-off {
+  background-image: url(../images/icon_off.png);
+  width: 50px;
+  height: 25px;
+}
+.icon-down-sm {
+  background-image: url(../images/icon_down_sm.png);
+  width: 15px;
+  height: 7.5px;
+}
+//step
+.icon-step1 {
+  background-image: url(../images/icon_step1.png);
+  width: 260px;
+  height: 45px;
+}
+.icon-step2 {
+  background-image: url(../images/icon_step2.png);
+  width: 260px;
+  height: 45px;
+}
+.icon-step3 {
+  background-image: url(../images/icon_step3.png);
+  width: 260px;
+  height: 45px;
+}
+.icon-step11 {
+  background-image: url(../images/icon_step11.png);
+  width: 260px;
+  height: 45px;
+}
+.icon-step22 {
+  background-image: url(../images/icon_step22.png);
+  width: 260px;
+  height: 45px;
+}
+.icon-step33 {
+  background-image: url(../images/icon_step33.png);
+  width: 260px;
+  height: 45px;
+}
+
+
+
+
+.icon-redpackets {//红包
+  background-image: url(../images/icon_redpackets.png);
+  width: 20px;
+  height: 20px;
+}
+.icon-bankcard {//bankcard
+  background-image: url(../images/icon_bankcard.png);
+  width: 20px;
+  height: 20px;
+}
+.icon-investment {//定投
+  background-image: url(../images/icon_investment.png);
+  width: 20px;
+  height: 20px
+}
+.icon-investment1 {//定投
+  background-image: url(../images/icon_investment1.png);
+  width: 25px;
+  height: 25px;
+  margin-top: -3px;
+}
+.icon-msg {//消息
+  background-image: url(../images/icon_msg.png);
+  width: 20px;
+  height: 20px;
+}
+.icon-service {//客服
+  background-image: url(../images/icon_service.png);
+  width: 20px;
+  height: 20px;
+}
+.icon-service1 {
+  background-image: url(../images/icon_service1.png);
+  width: 18px;
+  height: 18px;
+}
+.icon-friend {//friend
+  background-image: url(../images/icon_friend.png);
+  width: 20px;
+  height: 20px;
+}
+.icon-about {//关于
+  background-image: url(../images/icon_about.png);
+  width: 20px;
+  height: 20px;
+}
+.icon-edition {//版本
+  background-image: url(../images/icon_edition.png);
+  width: 20px;
+  height: 20px;
+}
+.icon-money {//现金宝
+  background-image: url(../images/icon_money.png);
+  width: 20px;
+  height: 20px;
+}
+.icon-dollars {//收益
+  background-image: url(../images/icon_dollars.png);
+  width: 20px;
+  height: 20px;
+}
+.icon-trade {//交易
+  background-image: url(../images/icon_trade.png);
+  width: 20px;
+  height: 20px;
+}
+.icon-others {//其他
+  background-image: url(../images/icon_others.png);
+  width: 20px;
+  height: 20px;
+}
+.icon-handset {//在线客服
+  background-image: url(../images/icon_handset.png);
+  width: 20px;
+  height: 20px;
+}
+.icon-call {//电话客服
+  background-image: url(../images/icon_call.png);
+  width: 20px;
+  height: 20px;
+}
+.icon-wechat{//微信
+  background-image: url(../images/icon_wechat.png);
+  width: 18px;
+  height: 18px;
+}
+.icon-erwei{//二维
+  background-image: url(../images/icon_erwei.png);
+  width: 16px;
+  height: 16px;
+}
+.icon-lion{
+  background-image: url(../images/icon_lion.png);
+  width: 18px;
+  height: 18px;
+}
+
+.icon-cost{//花费
+  background-image: url(../images/icon_cost.png);
+  width: 20px;
+  height: 20px;
+}
+.icon-home {
+  background-image: url(../images/icon_home.png);
+  width: 30px;
+  height: 30px;
+}
+.icon-finance {
+  background-image: url(../images/icon_finance.png);
+  width: 30px;
+  height: 30px;
+}
+.icon-assets{
+  background-image: url(../images/icon_assets.png);
+  width: 30px;
+  height: 30px;
+}
+.icon-account {
+  background-image: url(../images/icon_account.png);
+  width: 30px;
+  height: 30px;
+}
+
+.icon-yellow {
+  background-image: url(../images/icon_yellow.png);
+  width: 20px;
+  height: 20px;
+}
+.icon-sure {
+  background-image: url(../images/icon_sure.png);
+  width: 12px;
+  height: 12px;
+}
+.icon-star {
+  background-image: url(../images/icon_star.png);
+  width: 28px;
+  height: 27px;
+}
+.icon-stars {
+  background-image: url(../images/icon_stars.png);
+  width: 28px;
+  height: 26px;
+}
+
+.icon-cash {//现金
+  background-image: url(../images/icon_cash_sm.png);
+  width: 30px;
+  height: 30px;
+}
+
+.icon-cashlight{
+  background-image: url(../images/icon_cash_light.png);
+  width: 18px;
+  height:18px;
+}
+.icon-zhekous {//1折
+  width: 32px;
+  height: 27px;
+  background: url("../images/icon_zhekous.png");
+
+}
+.icon-zhekou {//1折
+  width: 32px;
+  height: 27px;
+  background: url("../images/icon_zhekou.png");
+}
+.icon-add {
+  background-image:url(../images/icon_add.png);
+  width: 30px;
+  height: 23px;
+}
+.icon-detail {
+  background-image: url("../images/icon_detail.png");
+  width: 30px;
+  height: 30px;
+}
+.icon-logo {//logo
+  background-image: url("../images/icon_logo.png");
+  width: 40px;
+  height: 40px;
+}
+.icon-gift {
+  background-image: url("../images/icon_gift.png");
+  width: 60px;
+  height: 60px;
+}
+.icon-fu {
+  background-image: url("../images/icon_fu.png");
+  width: 60px;
+  height: 60px;
+}
+.icon-arrow {
+  background-image: url("../images/icon_arrow.png");
+  width: 20px;
+  height: 20px;
+}
+.icon-arrow-right {//右箭头
+  background-image: url("../images/icon_arrow_right.png");
+  width: 6px;
+  height: 9px;
+  margin-right: 5px;
+}
+.icon-hongbao {//红包
+  background-image: url("../images/redpacketnew.png");
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}
+
+//定投明细
+.icon-calculator{
+  background-image: url("../images/icon_calculator.png");
+  width: 9px;
+  height: 12px;
+  margin-right: 9px;
+}
+.icon-dollarstotal{
+  background-image: url("../images/icon_dollarstotal.png");
+  width: 15px;
+  height: 10px;
+  margin-right: 3px;
+}
+.icon-abacus{
+  background-image: url("../images/icon_abacus.png");
+  width: 13px;
+  height: 13px;
+  margin-right: 5px;
+}
+
+.icon-tip{//问题解答
+  background-image: url(../images/icon_tip.png);
+  width: 11px;
+  height: 11px;
+  margin-right: 5px;
+}
+
+//radio
+.icon-radio {
+  background-image: url(../images/icon_radio.png);
+  width: 16px;
+  height: 16px;
+}
+.icon-radios {
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/icon_radio1.png);
+}
+//checkbox
+.icon-checkbox {
+  background-image: url(../images/icon_checkbox_n.png);
+  width: 16px;
+  height: 16px;
+}
+//arrow
+.icon-down {
+  background-image: url(../images/icon_down.png);
+  width: 14px;
+  height: 14px;
+}
+.icon-up {
+  background-image: url(../images/icon_up.png);
+  width: 14px;
+  height: 14px;
+}
+.icon-top {
+  background-image: url(../images/icon_top.png);
+  width: 8px;
+  height: 14px;
+}
+.icon-bottom {
+  background-image: url(../images/icon_bottom.png);
+  width: 8px;
+  height: 14px;
+}
+.icon-line {
+  background-image: url(../images/icon_line.png);
+  width: 10px;
+  height: 3px;
+}
+.icon-left {
+  background-image: url(../images/icon_left_red.png);
+  width: 9px;
+  height: 15px;
+}
+.icon-right-red {
+  background-image: url(../images/icon_right_red.png);
+  width: 9px;
+  height: 15px;
+}
+.icon-right-white {
+  background-image: url(../images/icon_right_white.png);
+  width: 6px;
+  height: 12px;
+}
+
+
+//方形色块
+.icon-fang1{
+  background-color: #ffaa6b;
+  width: 7px;
+  height: 7px;
+}
+.icon-fang2{
+  background-color: #ffdfb9;
+  width: 7px;
+  height: 7px;
+}
+.icon-fang3{
+  background-color: #4ab3fd;
+  width: 7px;
+  height: 7px;
+}
+.icon-fang4{
+  background-color: #73cfff;
+  width: 7px;
+  height: 7px;
+}
+.icon-fang5{
+  background-color: #ff8d8d;
+  width: 7px;
+  height: 7px;
+}
+.icon-fang6{
+  background-color: #bfbcfd;
+  width: 7px;
+  height: 7px;
+}
+//圆形
+.icon-round{
+  background-image: url(../images/icon_round.png);
+  width: 6px;
+  height: 6px;
+  margin-right: 5px;
+}
+//
+.icon-iphone{
+  background-image: url(../images/icon_iphone.png);
+  width: 21px;
+  height: 43px;
+}
+.icon-arrow-down{
+  background-image: url(../images/icon_arrow_down.png);
+  width: 10px;
+  height: 6px;
+}
+.icon-sound{//跑马灯
+  background-image: url(../images/icon_sound.png);
+  width: 20px;
+  height: 16px;
+}
+.icon-jiong{//无基金
+  background-image: url(../images/icon_jiong.png);
+  width: 38px;
+  height: 38px;
+}
+
+//bank
+$bank-name:b001,b002,b003,b004,b005,b006,b007,b008,b009,b010,b011,b012,b013,b014,b015,b016,b017,b018,b019,b200,b201,b202,b203,b204;
+@each $bankName in $bank-name {
+  .bank-#{$bankName} {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: no-repeat center;
+    vertical-align: middle;
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-image: url('../images/bank_#{$bankName}.png');
+
+  }
+}
+
+//css sprites
+[class^=icons-] {
+  display: inline-block;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+.icons-more {
+  background-image: url(../images/icon_list.png);
+  width: 45px;
+  height: 45px;
+  background-position: -2px -1104px;
+}
+.icons-photo {
+  background-image: url(../images/icon_lists.png);
+  width: 124px;
+  height: 135px;
+  background-position:0 -5px;
+}
+.icons-left {
+  background-image: url(../images/icon_list.png);
+  width: 30px;
+  height: 30px;
+  background-position: -2px -1203px;
+}
+.icons-redpackets {//红包
+  background-image: url(../images/icon_list.png);
+  width: 35px;
+  height: 40px;
+  background-position: -10px -706px
+}
+.icons-bankcard {//bankcard
+  background-image: url(../images/icon_list.png);
+  width: 35px;
+  height: 40px;
+  background-position: -10px -756px
+}
+.icons-investment {//定投
+  background-image: url(../images/icon_list.png);
+  width: 35px;
+  height: 40px;
+  background-position: -10px -806px
+}
+.icons-msg {//消息
+  background-image: url(../images/icon_list.png);
+  width: 35px;
+  height: 40px;
+  background-position: -10px -856px
+}
+.icons-service {//客服
+  background-image: url(../images/icon_list.png);
+  width: 35px;
+  height: 40px;
+  background-position: -10px -906px
+}
+.icons-friend {//friend
+  background-image: url(../images/icon_list.png);
+  width: 35px;
+  height: 40px;
+  background-position: -10px -956px
+}
+.icons-about {
+  background-image: url(../images/icon_list.png);
+  width: 35px;
+  height: 40px;
+  background-position: -10px -1008px
+}
+.icons-edition {
+  background-image: url(../images/icon_list.png);
+  width: 35px;
+  height: 40px;
+  background-position: -10px -1056px
+}
+
+.icons-home {
+  background-image: url(../images/icon_list.png);
+  width: 45px;
+  height: 45px;
+  background-position: 0 0;
+  &:hover {
+    background-position: 0 -50px;
+  }
+}
+.icons-finance {
+  background-image: url(../images/icon_list.png);
+  width: 45px;
+  height: 45px;
+  background-position: 0 -100px;
+  &:hover {
+    background-position: 0 -150px;
+  }
+}
+.icons-assets{
+  background-image: url(../images/icon_list.png);
+  width: 45px;
+  height: 45px;
+  background-position: 0 -202px;
+  &:hover {
+    background-position: 0 -252px;
+  }
+}
+.icons-account {
+  background-image: url(../images/icon_list.png);
+  width: 45px;
+  height: 45px;
+  background-position: 0 -300px;
+  &:hover {
+    background-position: 0 -350px;
+  }
+}
+
+
+.icon-dollarscoins {
+  background-image: url(../images/icon_dollarcoins.png);
+  width:18px;
+  height: 18px;
+}
+
+

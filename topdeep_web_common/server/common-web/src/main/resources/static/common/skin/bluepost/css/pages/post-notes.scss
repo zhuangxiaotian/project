@@ -1,0 +1,91 @@
+@charset "UTF-8";
+.bg-account1 {//开户
+  background-color: #dfc8b8;
+}
+.bg-account2 {
+  background-color: #f6e5d9;
+}
+.bg-buy1 {//购买
+  background-color: #f0ce65;
+}
+.bg-buy2 {
+  background-color: #f7e9c0;
+}
+.bg-search1 {//查询
+  background-color: #8abae1;
+}
+.bg-search2 {
+  background-color: #c6dff4;
+}
+.padding-l {
+  padding-left: 0;
+}
+.padding-r {
+  padding-right: 0;
+}
+.border-white {
+  padding: 5px 0;
+  hr{
+    border-bottom:1px dashed #ffffff;
+  }
+}
+.postnotes {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.note-caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: middle;
+  border-top: 8px dashed;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  margin-left: -8px;
+  color: #666;
+  z-index: 99;
+}
+.postnote-title {
+  font-size: 24px;
+  text-align: center;
+  padding: 10px 0;
+  border-bottom:1px dashed #666666;
+}
+.postnote-title-s {
+  font-size: 16px;
+  text-align: center;
+  padding: 10px 0;
+  border-bottom:1px solid #666666;
+  position: relative;
+}
+.notes-title{
+  font-size: 16px;
+  color: #666666;
+  text-align: left;
+  padding: 10px 0;
+}
+.notes-step {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  color: #ffffff;
+  background-color: #646464;
+  text-align: center;
+  @include roundBox($radius:20px);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.notes-pic{
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 10px;
+  &>img{
+    width: 100%;
+    max-width: 456px;
+  }
+}

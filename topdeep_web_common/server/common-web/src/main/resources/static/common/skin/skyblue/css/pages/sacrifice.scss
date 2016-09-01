@@ -1,0 +1,205 @@
+@charset "UTF-8";
+//收付款
+.sacrifice{
+  margin-top: 8px;
+  padding:50px 0;
+  background-color: #ffffff;
+
+}
+.get,.pay{
+  display: block;
+  align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  &>div{
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    &>img{
+      display: block;
+      width: 100%;
+    }
+  }
+}
+.scan{
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-top: 8px;
+  &>img{
+    display: block;
+    width: 100%;
+    height: 200px;
+    border: 0;
+  }
+  .scan-content{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top:70px;
+    left:0;
+    z-index: 9;
+    &>a{
+      display: block;
+      font-size: 1.5em;
+      color: #ffffff;
+      &>img{
+        width: 40px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+//二维码
+.qrcode{
+  width: 100%;
+  padding: 15px 0;
+}
+.qrcode-box{
+  width: 200px;
+  height: 230px;
+  background-color: $color-yellow;
+  margin: 0 auto;
+  padding: 10px;
+  @include roundBox($radius:8px);
+  &>img{
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+}
+.qrcode-scan{
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+//收付款
+.state{
+  text-align: center;
+  padding: 15px 0;
+
+
+}
+.state-detail{
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+  &:after{
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid #d9d9d9;
+    color: #d9d9d9;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+  }
+}
+.state-content{
+  padding: 10px 0;
+  &>div{
+    padding: 5px 0;
+  }
+}
+
+//radio
+.radio-list{
+  overflow: hidden;
+  &>li{
+    float: left;
+    margin-right:8%;
+  }
+  &>li.active{
+    .icon-radio{
+      background-image: url("../images/icon_radio_s.png");
+    }
+  }
+}
+.target2{
+  display: none;
+  position: relative;
+  &:before{
+    content: " ";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid #d9d9d9;
+    color: #d9d9d9;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    left:0;
+    border-top:1px solid #d9d9d9;
+  }
+}
+
+//联系人
+.contacts-fixed{
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top:45px;
+  z-index: 9;
+}
+.contacts{
+  padding: 0 10px 5px;
+  background-color: $color-blue;
+}
+.contacts-list{
+  @include flex($val:5);
+  &:nth-child(1){
+    @include flex($val:3);
+  }
+  &:nth-child(2){
+    padding: 0 10px;
+  }
+  &>a{
+    font-size: 13px;
+    color: #ffffff;
+    border:2px solid rgba(255,255,255,0.8);
+    line-height: 26px;
+    vertical-align: middle;
+  }
+  &>a.blacklist{
+    display: inline-block;
+    padding: 0 24%;
+  }
+  &>a.active{
+    background-color: $color-yellow;
+    border-color:$color-yellow ;
+  }
+  .weui_btn+.weui_btn{
+    margin-top: 5px;
+  }
+}
+.contacts-title{
+  border-bottom: 1px solid #ddd;
+  background-color: $color-gray;
+  .flex-cell{
+    font-size: 16px;
+    text-align: center;
+    padding: 5px 0;
+    &:first-child{
+      border-right: 1px solid #ddd;
+    }
+  }
+}
+.contacts-detail{
+  padding: 0 10px;
+  padding-top: 176px;
+  .sub-cell{
+    border-bottom: 1px solid #ddd;
+    .flex-cell{
+      text-align: center;
+    }
+  }
+}

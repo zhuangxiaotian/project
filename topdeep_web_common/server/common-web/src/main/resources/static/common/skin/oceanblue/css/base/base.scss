@@ -1,0 +1,116 @@
+@charset "UTF-8";
+@mixin flex($val:1) {
+  -webkit-box-flex: $val;
+  -webkit-flex: $val;
+  -moz-box-flex: $val;
+  -moz-flex: $val;
+  -ms-flex: $val;
+  flex: $val;
+  -moz-box-pack: center;
+  -webkit-box-pack: center;
+  box-pack: center;
+  -moz-box-align: center;
+  -webkit-box-align: center;
+  box-align: center;
+}
+
+@mixin roundBox($radius:6px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin boxSizing($val) {
+  -webkit-box-sizing: $val;
+  -moz-box-sizing: $val;
+  -ms-box-sizing: $val;
+  box-sizing: $val;
+}
+$color-blue:#1b75da;//蓝色
+$color-red:#ff3b2f;//红色
+$color-yellow:#fcc211;//黄色
+$color-gold:#804f10;//棕
+$color-green:#03d908;//棕
+html{
+  font-size: 62.5%;
+  -webkit-tap-highlight-color: transparent;
+}
+body,div,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,iframe,input,textarea,select,label,article,aside,footer,header,menu,nav,section,time,audio,video{margin:0;padding:0;}
+body {
+  position: relative;
+  background-color:#F0EFF4;
+  font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", FontAwesome, sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #272727;
+  font-size: 1.4rem;
+  -webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;
+}
+article,aside,footer,header,nav,section,canvas,img{display:block}
+iframe,img{border:0}
+ul,ol,li{list-style:none}
+body, input, textarea, select, button, ul, li {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga", "kern";
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+@media only screen and (max-width:640px) {
+  body {
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+  }
+}
+a {
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+  &:focus{
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+  }
+}
+input[type="checkbox"]{-webkit-appearance:checkbox;}
+input{-webkit-appearance:none;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+caption,th{text-align:left;}
+.fl {
+  float: left!important;
+}
+.fr {
+  float: right!important;
+}
+//flex
+.flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.flex-cell{
+  @include flex();
+}
+//color
+.red{color:$color-red!important;}
+.blue{color:$color-blue!important;}
+.yellow{color:#fee158!important;}
+.green{color:$color-green!important;}
+.gold{color: #804f10!important;}
+.gray{color: #666666!important;}
+.light{color: #c6c6c6!important;}
+.white{color: #ffffff!important;}
+//bgcolor
+.bg-white{background-color: #ffffff!important;}
+.bg-yellow{background-color:$color-yellow!important;}
+.bg-blue{background-color:$color-blue!important;}
+.bg-gray{background-color: #e6e6e6!important;}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?><Finance>
+<Message id="">
+<Configs id="Configs">
+<item name="item1">1</item>
+<item name="item2">2</item>
+<item name="item3">3</item>
+<item name="item4">4</item>
+<item name="item30">30</item>
+<item name="item31">31</item>
+<item name="item50">50</item>
+<item name="item51">51</item>
+<item name="item4">20</item>
+<item name="item4">21</item>
+</Configs>
+</Message>
+</Finance>

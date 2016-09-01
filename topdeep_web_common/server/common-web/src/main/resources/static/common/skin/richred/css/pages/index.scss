@@ -1,0 +1,580 @@
+@charset "UTF-8";
+//index
+.section {
+  min-height: 360px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+}
+.tab-placeholder{
+  width: 100%;
+  height: 54px;
+}
+//跑马灯
+#scrollDiv
+{
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+  border:0;
+  overflow: hidden;
+  position: relative;
+  padding: 5px 0;
+  margin-bottom: 5px;
+  background-color: #ffffff;
+  ul{
+    margin-left: 32px;
+    li{
+      height: 25px;
+      line-height: 25px;
+      padding-left:2px;
+      font-size: 14px;
+      color:$font-light1;
+      &>a{
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+.notice {
+  display: block;
+  position: absolute;
+  top:9.5px;
+  left: 10px;
+  width: 20px;
+  height: 16px;
+}
+.na_fund {
+  width: 100%;
+  height: auto;
+  font-size: 14px;
+  margin-bottom: 8px;
+  .na_fund_content {
+    margin-top: 10px;
+    line-height: 30px;
+    overflow: hidden;
+    background-color: $font-red;
+    li{
+      float: left;
+      a,span {
+        display: inline-block;
+      }
+      .na_fund_title{
+        color: $color-red;
+        font-size: 18px;
+        .icon-cash{
+          width: 25px;
+          height: 25px;
+          margin-top:-3px;
+        }
+        .icon-investment {
+          width: 30px;
+          height: 30px;
+          margin-top:-5px;
+        }
+        .icon-arrow {
+          margin-top:-5px;
+        }
+        .icon-cashlight,//现金宝
+        .icon-dollarscoins {//基金账户
+          margin-bottom: 2px;
+        }
+      }
+      .na_fund_title1{
+        font-size: 14px;
+        .fund_tip{
+          width: 22px;
+          height: 22px;
+          line-height: 22px;
+          font-size: 16px;
+          margin-bottom: 2px;
+        }
+      }
+      &:last-child {
+        float: right;
+        margin-left:0;
+      }
+      .fund-type1 {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
+  .margin-0{//我的资产
+    margin-top: 0px;
+  }
+  .na_fund_detail {
+    @extend .na_fund_content;
+    background-color: $bg-light;
+    margin: 0;
+    li{
+      padding: 0 10px;
+    }
+  }
+  .na_fund_receipt {
+    width: 100%;
+    height: auto;
+    line-height: 30px;
+    background-color: $color-white;
+    overflow: hidden;
+    padding-bottom: 5px;
+    padding: 5px 0;
+    @extend .flex;
+    &>div {
+      @include flex();
+    }
+    .gift-box{
+      &:first-child{
+        border-right: 1px solid $border-light;
+      }
+      &>div{
+        @extend .flex;
+        text-align: center;
+        .icon-gift{
+          margin-left: 10px;
+        }
+        .icon-fu{
+          margin-right: 10px;
+        }
+        .gift-tip-l
+        {
+          @include flex();
+          .redpacket-numb{
+            color: $font-red1;
+            font-style: italic;
+            font-weight: bold;
+          }
+        }
+
+      }
+      .gift-tip-r{
+        text-align: left;
+        padding-left: 10px;
+      }
+    }
+    .fund_t {
+      font-size: 14px;
+      color: $font-light1;
+      text-align: center;
+      padding:0 10px;
+    }
+    .fund_t1 {
+      font-size: 20px;
+      text-align: left;
+      padding: 10px 0 10px 15px;
+    }
+    .fund_recl{
+      font-size: 28px;
+      color: $color-red;
+      padding: 10px 0;
+      border-right: 1px solid $border-light;
+      text-align: center;
+    }
+    .fund_recr{
+      text-align: center;
+      font-size: 28px;
+      padding: 10px 0;
+    }
+  }
+  .fund-list{
+    position: relative;
+  }
+
+}
+.na_fund_pro{//基金名称
+  background-color: $color-white;
+  margin-bottom: 5px;
+  padding-top: 5px;
+  @extend .flex;
+  .na_fund_tip{
+    padding: 5px 10px;
+    color: $font-light1;
+    @include flex();
+  }
+  .na_fund_name{
+    @include flex();
+    padding-top: 5px;
+    text-align: center;
+    position: relative;
+    .na_fund_date{
+      position: absolute;
+      display: inline-block;
+      font-size: 12px;
+      color: $font-light2;
+      right: 10px;
+      top: 8px;
+    }
+  }
+
+}
+.fund_adv {
+  color:$bg-gray;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  em {
+    display: inline-block;
+    padding: 0 5px;
+    font-weight: bolder;
+  }
+  &>span{
+    display: inline-block;
+    padding: 1px 4px;
+  }
+  .fund-type-yellow{
+    color: $font-base;
+  }
+  .fund-type-red{
+    margin-left: 4px;
+    margin-right: 4px;
+    &:first-child{
+      margin-left:5px;
+    }
+  }
+}
+.fund_adv1 {
+  @extend .flex;
+  margin: 15px 0;
+  li {
+    @include flex();
+    text-align: center;
+    .fund-type-yellow {
+      width: 80%;
+    }
+  }
+}
+
+//基金列表
+.fund-list {
+  margin-bottom: 10px;
+  padding: 10px 0 5px;
+  height: auto;
+  background-color: $color-white;
+  position: relative;
+  @include roundBox();
+  .fund-style {
+    padding: 10px;
+    font-size: 16px;
+    .fund-type1 {
+      display: inline-block;
+      font-size: 12px;
+      padding: 1px 4px;
+      color: $color-red;
+      border: 1px solid $color-red;
+      float: right;
+      line-height: 20px;
+      @include roundBox($radius:4px);
+    }
+  }
+  @media screen and (max-width:330px) {
+    .fund-style{
+      font-size: 14px;
+    }
+  }
+  .fund-new {
+    display:inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+    color: $color-white;
+    &>em{
+      font-size:8px;
+      display: block;
+      margin-top:-5px;
+      height:18px;
+      line-height: 18px;
+      //margin-top: 3px;
+      //margin-right: 3px;
+      transform: rotate(35deg);
+      -o-transform:rotate(35deg);
+      -ms-transform:rotate(35deg);
+      -moz-transform:rotate(35deg);
+      -webkit-transform:rotate(35deg);
+    }
+  }
+  .fund-description{//基金说明
+    padding:0 10px;
+    &>div{
+      border-top: 1px solid rgba(102,102,102,0.2);
+      word-wrap: break-word;
+      font-size: 12px;
+      padding-top: 5px;
+    }
+  }
+}
+
+.fund-r {
+  float: right;
+}
+
+.distance-r {
+  margin-left: 5px;
+  margin-right:2px;
+}
+.debit-tip {//定制提示
+  width: 100%;
+  overflow: hidden;
+  &>span {
+    display: inline-block;
+    float: right;
+    margin-right: 30px;
+  }
+}
+.bank-tip {//银行提示
+  font-size: 14px;
+  color: #666666;
+  margin-left: 5px;
+  line-height: 20px;
+}
+
+//banner
+.slideBox {
+  position: relative;
+  overflow: hidden;
+  .hd {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    text-align: center;
+    ul {
+      display: inline-block;
+    }
+    li {
+      float: left;
+      /* display:inline-block;*/
+      width: 6px;
+      height: 6px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      background: transparent;
+      text-indent: -9999px;
+      overflow: hidden;
+      margin: 0 6px;
+      &.on {
+        background: transparent;
+      ;
+      }
+    }
+  }
+  .bd {
+    position: relative;
+    z-index: 0;
+    li {
+      position: relative;
+      text-align: center;
+      img {
+        vertical-align: top;
+        width: 100%;
+      }
+      a {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+    }
+  }
+}
+
+//定投
+.investment {
+  width: 100%;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  .investment-detail {
+    margin:0 10px;
+    padding: 5px 0;
+    border-bottom: 1px dashed #ebebeb;
+    text-align: center;
+  }
+}
+
+.fund-type { //类型
+  display: inline-block;
+  font-size: 10px;
+  padding: 0 4px;
+  margin:0 2px 2px 0;
+  height: 16px;
+  line-height: 16px;
+  vertical-align: middle;
+  background-color:$color-red;
+  color: #ffffff;
+  @include roundBox($radius:4px);
+}
+
+.fund-type-red {
+  display: inline-block;
+  font-size: 12px;
+  padding: 1px 4px;
+  margin-right: 3px;
+  height: 20px;
+  line-height: 20px;
+  color: $color-red;
+  background-color: $color-white;
+  border: 1px solid $color-red;
+  @include roundBox($radius:4px);
+}
+.fund-type-yellow {
+  color: $color-yellow;
+  border: 1px solid $color-yellow;
+  @extend .fund-type-red;
+}
+.fund-type-orange {
+  color: $color-orange;
+  border: 1px solid $color-orange;
+  @extend .fund-type-red;
+}
+.fund-code {
+  font-size: 12px;
+  color: #666666;
+  padding-left: 2px;
+}
+
+//基金列表标签
+.distance-listr{
+  margin-right: 1%;
+}
+//.fundlist-typel{
+//  display: inline-block;
+//  font-size: 10px;
+//  padding: 1px 4px;
+//  color: #d9b465;
+//  border: 1px solid #d9b465;
+//  float: right;
+//  line-height: 20px;
+//  border-radius:8px;
+//}
+.fundlist-typl:after{
+
+}
+
+.text-left {
+  padding: 10px 0 15px 0!important;
+  text-align: left!important;
+}
+.text-right{
+  padding: 10px 0px  15px 10px!important;
+  text-align: right!important;
+}
+
+.fund_asset_title{
+  color: $color-white;
+  font-size: 14px;
+  margin-left: 10px;
+}
+.fund-type-new{
+  font-size: 8px;
+  padding: 0px 8px;
+  height: 18px;
+  line-height: 18px;
+  color: #ffffff;
+  margin: 0px 10px;
+  background-color: $font-red;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  margin-top: -2px;
+}
+.fund-type-orange1{//盈亏查询
+  font-size: 14px;
+  padding: 2px 8px;
+  height: 18px;
+  line-height: 18px;
+  color: #ffffff;
+  margin: 0px 10px;
+  background-color: $color-orange;
+  margin-top: -2px;
+  @include roundBox($radius:4px);
+}
+
+.font-white{
+  color:#fff;
+}
+.fund-list1{
+  padding: 15px 10px;
+  margin-bottom: -10px;
+  height: auto;
+  background-color: #ffffff;
+  position: relative;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.fund-list2{
+  padding: 15px 10px;
+  margin-bottom: -10px;
+  height: auto;
+  background-color: #ffffff;
+  position: relative;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  border-radius: 6px;
+}
+.fund-type-gold{
+  font-size: 14px;
+  padding: 1px 6px;
+  height: 20px;
+  line-height: 20px;
+  color: #ffffff;
+  margin: 0px 10px;
+  background-color: #dab775;
+  border: 1px solid #fff;
+  border-radius: 6px;
+}
+.fund-type-yellow1{//定投管理
+  display: inline-block;
+  font-size: 14px;
+  padding: 1px 6px;
+  color: #ffffff;
+  margin: 0px 10px;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  background-color: $color-yellow;
+}
+.fund-type-blue{
+  @extend .fund-type-gold;
+  background-color: #96bfd4;
+}
+.na_fund .na_fund_content1{
+  border-bottom: none;
+  margin-top: 10px;
+  overflow: hidden;
+  background-color: #e54e48;
+}
+.fundlist-table tbody tr .assets-tip1 {
+  text-align: left;
+  font-style: italic;
+  padding: 10px 0;
+  font-size:12px;
+}
+
+.fund-tips-s{
+  margin-top:-10px;
+}
+.bg-opcity{
+  background-image: url(../images/bg-myassets.png);
+  background-position: right top;
+}
+
+
+.padd-m{
+  padding: 0 20px ;
+  background-color: #e54e48;
+}
+.bg-opcity {
+  .fund-table{
+    background-color: transparent!important;
+  }
+}
+.td-height-s{
+  padding: 1px 0 0 0 !important;
+}
+.padd-none{
+  padding:0!important;
+}

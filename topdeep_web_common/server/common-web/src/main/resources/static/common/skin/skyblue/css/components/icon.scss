@@ -1,0 +1,124 @@
+@charset "UTF-8";
+//single
+[class^=icon-] {
+  display: inline-block;
+  background: no-repeat center;
+  vertical-align: middle;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+//index
+.icon-jsy {
+  background: url(../images/icon_jsy.png) no-repeat center;
+  vertical-align: middle;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+.icon-sacrifice {
+  background: url(../images/icon_sacrifice.png) no-repeat center;
+  vertical-align: middle;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+.icon-bill {
+  background: url(../images/icon_bill.png) no-repeat center;
+  vertical-align: middle;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.icon-more {
+  background: url(../images/icon_more.png) no-repeat center;
+  vertical-align: middle;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+//
+.icon-notice{
+  background-image: url(../images/icon_notice.png);
+  width: 20px;
+  height: 20px;
+}
+//历史明细
+.icon-alert{
+  background-image: url(../images/icon_alert.png);
+  width: 16px;
+  height: 16px;
+}
+//返回
+.icon-back{
+  background-image: url(../images/icon_back.png);
+  width: 19px;
+  height: 19px;
+}
+.icon-right{
+  background-image: url(../images/icon_right.png);
+  width: 10px;
+  height: 18px;
+}
+.icon-search{//搜索
+  background-image: url(../images/icon_search.png);
+  width: 18px;
+  height: 18px;
+}
+.icon-redpacket{//红包
+  background-image: url(../images/icon_redpacket.png);
+  width:28px;
+  height:32px;
+  margin-right: 5px;
+}
+.icon-add{
+  background-image: url(../images/icon_add.png);
+  width:35px;
+  height:35px;
+}
+
+//checkbox&radio
+.icon-checkbox{
+  background-image: url(../images/icon_checkbox.png);
+  width: 18px;
+  height: 18px;
+  margin-right: 3px;
+}
+.icon-checkbox-s{
+  @extend .icon-checkbox;
+  background-image: url(../images/icon_checkbox_s.png);
+}
+.icon-radio{
+  background-image: url(../images/icon_radio.png);
+  width: 16px;
+  height: 16px;
+  margin-right: 3px;
+}
+.icon-radio-s{
+  @extend .icon-radio;
+  background-image:url(../images/icon_radio_s.png) ;
+}
+//state
+.icon-success{//成功
+  background-image: url(../images/icon_success.png);
+  width:50px;
+  height:50px;
+}
+.icon-fail{//失败
+  background-image: url(../images/icon_fail.png);
+  width:50px;
+  height:50px;
+}
+
+//bank
+$bank-name:b001,b002,b003,b004,b005,b006,b007,b008,b009,b010,b011,b012,b013;
+@each $bankName in $bank-name {
+  .bank-#{$bankName} {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 3px;
+    background: no-repeat center;
+    vertical-align: middle;
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-image: url('../images/bank_#{$bankName}.png');
+
+  }
+}

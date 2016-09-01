@@ -1,0 +1,167 @@
+@charset "UTF-8";
+//表单
+.sub-form{
+  padding: 0 10px;
+  &~.sub-form{
+    margin-top: 6px;
+  }
+  .weui_cell{
+   padding: 10px 0;
+    &:before{//dividend
+      left: 0;
+    }
+    .weui_cell_ft:after{//右箭头
+      content: " ";
+      display: inline-block;
+      height: 18px;
+      width: 10px;
+      background: url("../images/icon_right.png") no-repeat center;
+      background-size: contain;
+      -webkit-background-size: contain;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      margin-top: -9px;
+    }
+  }
+  .sub-select{//选择框
+    padding: 0;
+    .weui_cell_primary:after{//下箭头
+      content: " ";
+      display: inline-block;
+      height: 10px;
+      width: 18px;
+      background: url("../images/icon_down.png") no-repeat center;
+      background-size: contain;
+      -webkit-background-size: contain;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      margin-top: -3px;
+    }
+    .weui_select{
+      padding-right: 20px;
+      padding-left: 0;
+    }
+  }
+  .weui_input{//输入框
+    height: 1.71428571em;
+    line-height: 1.71428571;
+    text-align: right;
+  }
+  input[readonly]:focus{
+    color: #ffffff;
+  }
+  input[class="sub-yzm"] {
+    display: inline-block;
+    width: 34%;
+    height: 26px;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    line-height: 26px;
+    font-size: 14px;
+    color: $color-white;
+    text-align: center;
+    vertical-align: middle;
+    background-color: $color-yellow;
+    padding: 3px 0;
+    position: absolute;
+    right:0px;
+    top: 6px;
+    z-index: 99;
+    cursor: pointer;
+    @include roundBox($radius:15px);
+  }
+}
+.weui_label{
+  width: auto;
+  min-width:105px;
+}
+.weui_cells_tips{//文字说明
+  font-size: 13px;
+  text-align: center;
+  padding-left: 0;
+  background-color:#dbdbdb;
+  position: relative;
+  &:before{
+    content: " ";
+    display: inline-block;
+    width: 10px;
+    height: 100%;
+    background-color: $color-gray;
+    position: absolute;
+    top:0;
+    left: -10px;
+  }
+  &:after{
+    content: " ";
+    display: inline-block;
+    width: 10px;
+    height: 100%;
+    background-color: $color-gray;
+    position: absolute;
+    top:0;
+    right: -10px;
+  }
+}
+//checkbox&radio
+.sub-check{
+  .icon-checkbox{
+    margin-top: -3px;
+  }
+}
+.sub-check-s{
+  .icon-checkbox{
+    background-image: url(../images/icon_checkbox_s.png);
+  }
+}
+
+//select
+select {
+  direction: rtl;
+}
+select option {
+  direction: ltr;
+}
+.weui_mask_transition{
+  -webkit-transition: background 0.1s;
+  transition: background 0.1s;
+  z-index: 998!important;
+}
+.select{
+  -webkit-appearance: none;
+  background-color: transparent;
+  font-size: inherit;
+  height: 44px;
+  line-height: 44px;
+  text-align: right;
+  position: relative;
+  z-index: 1;
+  padding-right: 25px;
+}
+.select-list{
+  z-index: 999;
+}
+.select-menu{
+  max-height: 300px;
+  overflow-y: auto;
+}
+//search
+.weui_search_bar:after {
+  border-bottom: transparent;
+}
+.weui_search_outer:after{
+  @include roundBox($radius:30px);
+  border: 1px solid rgba(0,0,0,0.3);
+}
+.weui_search_inner{
+  .weui_icon_search{
+    left: auto;
+    right: 10px;
+    top:0;
+  }
+  .weui_search_input{
+    text-align: center;
+  }
+}

@@ -1,0 +1,144 @@
+@charset "UTF-8";
+//清除浮动
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+//边距
+.sub-placeholder {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+.sub-placeholder-lg {
+  margin-top: 5% !important;
+  margin-bottom: 5% !important;
+}
+.margin-spacing0{
+  margin-top:0;
+}
+//上下内边距
+.padding-spacing{
+  padding:10px 0;
+}
+.padding-spacing-lr{
+  padding-left:10px;
+  padding-right:10px;
+}
+.padding-top{
+  padding-top: 10px;
+}
+.padding-b20{
+  padding-bottom: 20px!important;
+}
+
+//左右浮动
+.sub-l{
+  float: left!important;
+}
+.sub-r{
+  float: right!important;
+}
+//水平居中/左/右
+.text-center {
+  text-align: center!important;
+}
+.text-l {
+  text-align: left!important;
+}
+.text-r {
+  text-align: right!important;
+}
+
+//字体大小
+.fontsize-24 {
+  font-size: 24px!important;
+}
+.fontsize-18 {
+  font-size: 18px!important;
+}
+.fontsize-16 {
+  font-size: 16px!important;
+}
+.fontsize-14{
+  font-size: 14px!important;
+}
+.fontsize-13 {
+  font-size: 13px!important;
+}
+.fontsize-12{
+  font-size: 12px!important;
+}
+.font-light{
+  color: $font-light;
+}
+
+//字体颜色
+.font-white{
+  color: rgba(255,255,255,0.9);
+}
+//边框
+
+.border-yellow{//黄边
+  border-bottom: 3px solid $color-yellow;
+}
+.dashline {//虚线
+  border-bottom: 1px dashed rgba(255,255,255,0.1);
+}
+.border-top {//上边框
+  border-top: 1px solid $border-light;
+}
+.border-bottom {//下边框
+  border-bottom: 1px solid $border-light;
+}
+.border-right {//右边框
+  border-right: 1px solid rgba(255,255,255,0.2);
+}
+.border-r {
+  border-right: 1px solid $border-gray;
+}
+//垂直居中
+.vertical-m{
+  vertical-align: middle!important;
+}
+
+
+
+
+//bg-color
+.bg-white{
+  background-color: $color-white;
+}
+
+//底部阴影
+.shadow-bottom{
+  box-shadow: 0 1px 2px 0 #dbdbdb;
+}
+//收付款
+.type-blue{
+  display: inline-block;
+  font-size: 16px;
+  padding: 4px 10px;
+  line-height: 24px;
+  vertical-align: middle;
+  background-color:$color-blue;
+  color: #ffffff;
+  @include roundBox($radius:12px);
+}
+.type-orange{
+  @extend .type-blue;
+  background-color: $color-orange;
+}
+.placeholder{
+  width: 100%;
+  height: 10px;
+  background-color:#e6e6e6;
+}
